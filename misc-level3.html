@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Level Manifesto</title>
+        <style>
+            
+            @font-face {
+                font-family: "atlas"; 
+                src: url("fonts/AtlasGrotesk-Regular.woff") format("woff");
+            }
+            @font-face {
+                font-family: "atlasbold"; 
+                src: url("fonts/AtlasGrotesk-Bold.woff") format("woff");
+            }
+            
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                margin: 20pt;
+                background-color: black;
+            }
+            
+            body.outline {
+                background-image: url("https://media.giphy.com/media/FlWAGwdKpzAHe/giphy.gif");
+                background-size: contain;
+            }
+            
+            h2 {
+                font-size: 60pt;
+                letter-spacing: 0.3pt; 
+                font-family: atlasbold; 
+                color: orangered;
+                margin-bottom: 2pt;
+            }
+            
+            h2.outline, p.subtitle.outline {
+                -webkit-text-stroke: 1pt black;
+                opacity: 0.1;
+            }
+            h2.outline:hover, p.subtitle.outline:hover {
+                -webkit-text-stroke: 1pt black;
+                opacity: 1;
+                cursor: pointer;
+            }
+            
+            p.subtitle {
+                font-size: 40pt;
+                letter-spacing: 0.5pt; 
+                font-family: atlas;
+                color: white;
+                -webkit-text-stroke: 0;
+                margin-bottom: 0;
+                animation: none;
+                border-bottom: 1pt solid white;
+                margin-bottom: 2pt;
+                margin-top: 4pt;
+            }
+            
+            span.emphasis {
+                color: yellow;
+                -webkit-text-stroke: 0;
+            }
+            
+            span.emphasis:hover {
+                color: orangered;
+                -webkit-text-stroke: 0;
+                cursor: pointer;
+                transition: color 0.1s ease-in-out;
+            }
+            
+            p {
+                font-size: 60pt; 
+                letter-spacing: 0.3pt; 
+                font-family: atlasbold; 
+                color: transparent;
+                -webkit-text-stroke: 1px yellow;
+                margin-bottom: 60pt;
+            }
+            
+            p.outline {
+                -webkit-text-stroke: 0 white;
+            }
+            
+            p.outline > span.emphasis {
+                animation: anim1 0.1s linear alternate infinite;
+            }
+            
+            p.outline > span.emphasis:hover {
+                animation: none;
+                color: white;
+                -webkit-text-stroke: 1pt black;
+                text-transform: uppercase;
+                font-size: 46pt;
+            }
+            
+            @keyframes anim1 {
+                0% {filter:blur(2px); color: orangered;}
+                100% {filter:blur(0); color: yellow}
+            }
+            
+        </style>
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('span.emphasis').click(function() {
+                    $('p, body, h2').toggleClass('outline');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        
+        <div class="manifestowrapper">
+            
+            <h2>BARCELONA MANIFESTO</h2>
+            
+            <p class="subtitle">Enzo Mari</p>
+            
+            <p class="subtitle">Notes by the author</p>
+            
+            <p></p>
+            
+            <p>Dear Catalan Government’s Counsellor for <span class="emphasis">Culture</span>,</p>
+                
+            <p>while producing the materials for the exhibition <span class="emphasis">I tried</span> to be consistent with <span class="emphasis">the reason why I</span> was awarded with the Barcellona Disseny (“in 2000 your professional route and your contribution to the culture of objects can offer an <span class="emphasis">opportune reflection</span> on the state of design today.”)</p>
+
+            <p>But the extent and complexity of the problems <span class="emphasis">this motivation implies</span> go far beyond the work of one artist. <span class="emphasis">I therefore thought it</span> was important—now that we are symbolically entering the new millennium—to take advantage of this opportunity to share with you and the public—including students, architects and the other workers—<span class="emphasis">my reflections in the classic and yet synthetic form of a Manifesto that I’ve decided to call</span>: Barcelona Manifesto.</p>
+
+            <h2>BARCELLONA MANIFESTO</h2>
+            
+            <p></p>
+            
+            <p>The <span class="emphasis">utopizing tension</span> of the origins of design must be recovered. If this is the allegory of a possible transformation, then it should reach as many people as possible. Those people who build our environment in a state of alienation and thus remain partially responsible of its transformation.</p> 
+
+            <p>The mechanisms lead by the IT revolution are presently <span class="emphasis">devouring</span> all ideas to <span class="emphasis">vomit</span> sellable goods.</p> 
+
+            <p>To begin with, in the next decades we must find the right ways to isolate from this <span class="emphasis">redundancy the transformation ideas</span>. In order to achieve that we must separate them from all those ideas that are generated by irresponsible anarchies that deny and trivialize the drive towards the utopia, thus making it impossible to get people involved.</p> 
+
+            <p>In the meanwhile, <span class="emphasis">it might be worth to generalize the idea</span> that: every project works towards ethics (which can be compared to the <span class="emphasis">Hippocratic</span> Oath.)</p>
+
+            <p class="subtitle">Enzo Mari, January 1999</p>
+            
+        </div>
+        
+    </body>
+</html>
