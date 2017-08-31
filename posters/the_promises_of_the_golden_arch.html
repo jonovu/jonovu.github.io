@@ -1,0 +1,607 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>The Promises of the Golden Arch</title>
+        <style>
+            
+            * {
+                margin: 0;
+                padding: 0;
+                font-size: 12pt;
+                line-height: 14pt;
+                font-weight: normal;
+                text-align: left;
+                text-indent: 0;
+                color: #dc0000;
+                vertical-align: top;
+            }
+            
+            body {
+                background-color: ghostwhite;
+            }
+            
+            div {
+                display: inline-block;
+                float: bottom;
+                clear: bottom;
+                text-overflow: ellipsis
+            }
+            body > div > div {
+                padding: 12pt;
+            }
+            
+            p, h2, h3, ul, ol, li, a {font-size: inherit; line-height: inherit;}
+            
+            .subtitle {margin-left: 12pt; font-size: 9pt;}
+            
+            h2 {display: none;}
+            
+            h3 {
+                text-align: center;
+            }
+            
+            .introduction {width: calc(100% - 26pt);}
+            .jobrequirements {width: calc(50% - 26pt);}
+            .jobfunctions {width: calc(50% - 26pt); font-size: 8pt; line-height: 10pt;}
+            .employeewages {width: calc(50% - 26pt);}
+            .sexualharassment {width: calc(50% - 26pt); font-size: 8pt; line-height: 10pt;}
+            .additionalresources {width: calc(50% - 26pt);}
+            .conclusion {width: calc(50% - 26pt); font-size: 8pt; line-height: 10pt;}
+            
+            .do {width: calc(50% - 26pt); font-size: 8pt; line-height: 10pt;}
+            
+            body {
+                overflow: hidden;
+                font-family: Clarendon;
+            }
+            .body1, .body2 {
+                animation: scrolldown 150s linear infinite;
+                position: absolute;
+            }
+            .body1 {
+                top: 0;
+            }
+            .body2 {
+                bottom: 100vh;
+            }
+            ul {
+                list-style: none;
+            }
+            li {
+                position: relative;
+                /*margin-bottom: 10px;*/
+                
+                &:before {
+                    display: block;
+                    position: absolute;
+                    font-size: 1em;
+                }
+            }
+            ul>li:before {
+                content: "☺︎";
+                margin: 10px;
+            }
+            
+            .big {
+                font-size: 11.5vh;
+                font-family: sans-serif;
+                font-weight: bold;
+                position: fixed;
+                color: yellow;
+                margin-top: 0;
+                line-height: 12vh;
+                top: 0;
+                animation: big 5s ease-out infinite alternate;
+                text-align: left;
+                margin: 12pt;
+                z-index: 1;
+                pointer-events: none;
+            }
+            
+            
+            @keyframes scrolldown {
+                0% {transform: translateY(0);}
+                100% {transform: translateY(100%);}
+            }
+            
+            @keyframes big {
+                0% {filter: blur(0); opacity: 0.3;}
+                10% {
+                    filter: blur(2px) contrast(20) brightness(2); opacity: 0.4;
+                    text-shadow: 0vh 0px 2px lightgrey;
+                    -webkit-text-stroke: 1px lightgrey;
+                }
+                80% {
+                    filter: blur(0.5px) contrast(20) brightness(2); opacity: 1;
+                    text-shadow: 0vh 0px 2px lightgrey;
+                    -webkit-text-stroke: 1px black;
+                }
+                100% {
+                    filter: blur(0.5px) contrast(20) brightness(2); opacity: 1;
+                    text-shadow: 0vh 0px 2px lightgrey;
+                    -webkit-text-stroke: 1px black;
+                }
+            }
+        </style>
+        
+    </head>
+    <body>
+        
+        <p class="big">Always ☺︎ keep ☺︎ your ☺︎ attitude ☺︎ in ☺︎ check ☺︎; It's ☺︎ the ☺︎ most ☺︎ important ☺︎ factor ☺︎ regarding ☺︎ your ☺︎ employment! ☺︎</p>
+        
+        <div class="body1">
+        
+            <div class="introduction">
+
+                <h2>Introduction</h2>
+                <p>Welcome to McDonald’s! Congratulations! You are now a McDonald’s employee. This might be your first job, a temporary job, or you might have transitioned to another McDonald’s restaurant. In any case, we welcome you to the McDonald’s family. This manual is a tool for you to use throughout your employment at McDonald’s. This manual covers job requirements, job functions, wage information, sexual harassment in the workplace, and provides additional resources. The sole purpose of this manual is to guide you in any time of need while you’re working at McDonald’s. If this manual does not solve a problem or question you might have, additional resources are listed to guide you to the right places. We hope you are successful here at McDonald’s, and we hope to enhance your success by providing this new employee manual. Good Luck!</p>
+
+            </div>
+
+            <div class="jobrequirements">
+
+                <h2>Employee Job Requirements</h2>
+                <p>McDonald’s has certain guidelines for each of our employees to follow. These are the specific job requirements for: Restaurant # 16866 – 756 W. Main St. Lewisville, TX 75067.</p>
+
+                <h3>Employee Uniforms</h3>
+                <p>New employees will be provided:</p>
+                <ul>
+                    <li>Uniform shirts</li>
+                    <li>Hat</li>
+                    <li>Nametag</li>
+                </ul>
+                <p>You must provide your own pants. Acceptable uniform pants are black dress pants. Unacceptable pants include, but are not limited to:</p>
+                <ul>
+                    <li>Jencos</li>
+                    <li>Wide-legged jeans</li>
+                    <li>Jeans with wide stitching on the seams</li>
+                    <li>Warm-up pants</li>
+                    <li>Running suit pants</li>
+                </ul>
+                <p>You are responsible for cleaning and maintaining your uniform.You may not come in to work if you are not completely dressed in uniform (shirt, pants, hat, and nametag).</p>
+                <p>An employee must follow these guidelines regarding employee appearance:</p>
+                <ul>
+                    <li>Limited size and amount of jewelry is allowed</li>
+                    <li>Hair styles should not draw any attention (e.g. hair color, height, length, and objects worn in hair). All employees must wear a hat or visor when on duty</li>
+                    <li>Long or artificial nails are not permitted. Also, fingernail polish is not allowed.</li>
+                    <li>A clean-shaven appearance is preferred on all males. The only facial hair allowed is a moustache that does not exceed the corners of the mouth. Goatees are not allowed. </li>
+                    <li>All employees must wear complete McDonald’s uniforms</li>
+                    <li>No earrings on males are allowed</li>
+                    <li>No tongue rings, tongue studs, nose rings, or any other facial rings are allowed while on duty</li>
+                    <li>Chewing gum and drinking beverages of any kind are not allowed while on duty</li>
+                </ul>
+                <p>Here are examples of what an acceptable appearance looks like for managers (left) and crew (right) shown to the right.</p>
+                <p>Employee Meals: You may purchase any menu item for ½ price only during break while on duty. Any store specials cannot be bought for ½ price. Items off the Dollar Menu cannot be bought for ½ price if those are the only items you are buying. Employees do not receive any kind of discounts while off duty or for family and friends.</p>
+                <p>Employee Loitering: You are expected to arrive early when coming to work. Employees who have finished their shift are requested to leave the premises as soon as possible. Off duty employees are not permitted to loiter on McDonald’s premises or disturb working employees.</p>
+                <h3>Other Resources:</h3>
+                <ul>
+                    <li>Speak to a manager directly (each restaurant has their own specific set of rules).</li>
+                    <li><a href="http://www.waytobeuniforms.com/">http://www.waytobeuniforms.com/</a> - create a free MAC account to view Mcdonald's full apparel Collection</li>
+                    <li><a href="http://www.waytobe.com/uniforms.html">http://www.waytobe.com/uniforms.html</a> - learn more about McDonald’s uniform suppliers Employee Appearance</li>
+                    <li><a href="http://www.mcdonalds.com/us/en/full_menu_explorer.html">http://www.mcdonalds.com/us/en/full_menu_explorer.html</a> - view full menu items.</li>
+                </ul>
+
+            </div>
+
+            <div class="jobfunctions">
+
+                <h2>Employee Job Functions</h2>
+                <p>This chapter lists out the basic job functions and responsibilities of each worker position.</p>
+
+                <p>Drive-Thru Responsibilities 1st Window (Pay Here): Training should provide you a basic understanding of where each menu item is located on the register. When taking an order, you should:</p>
+                <ol>
+                    <li>Greet the customer (Example: Welcome to McDonald’s, may I take your order?).</li>
+                    <li>Take the order (asking every once in a while, anything else? or will that be all?)</li>
+                    <li>When the customer is finished ordering, verify their order is correct (Example: Is your order correct on the screen?) by having them read their order on the screen as in the picture shown on the right. This is especially important if they added specifications to their order.</li>
+                    <li>Tell the customer their total and say Thank You. </li>
+                </ol>
+
+                <p>When the customer arrives at your window:</p>
+                <ol>
+                    <li>Greet them again (Example: Hello, how are you sir/ma’am?) with a smile.</li>
+                    <li>During rush hours, it’s very convenient to repeat the order to the customer, so as to not charge them wrong.</li>
+                    <li>Repeat their total.</li>
+                    <li>Charge their order</li>
+                    <li>Return their change/card and their receipt and give them a farewell (Example: Have a nice day!)</li>
+                </ol>
+
+                <p>2nd Window (Pick-Up Here) - Training should provide you basic understanding of how the screens displaying orders work and what buttons you should press and so on. For each order, you should:</p>
+                <ol>
+                    <li>Gather all the drinks (These include: fountain drinks, McCafe drinks, milkshakes, McFlurries, milks, juice boxes)</li>
+                    <li>Greet the customer (Example: Hello, how are you?) with a smile. A customer should verify their order is correct</li>
+                    <li>Tell them what their drinks are and hand them to the customers (if you repeat their order, the customer will know if the order was taken wrong and you can fix it at the window).</li>
+                    <li>Gather the food bag. Check to make sure all the food is in the bag. It is your responsibility that all the food is in the bag before handing it to the customer.</li>
+                    <li>Repeat their food order briefly (Example: cheeseburgers and a fry) while handing them their bag (again this would clarify any mistakes when their order was taken) with a smile as shown in the picture to the right. NOTE: You risk losing your job if you give away any free food or drinks, Happy Meal toys or any other products.</li>
+                    <li>Say Thank You and give them a farewell.</li>
+                </ol>
+
+                <h3>Kitchen Reponsibilities:</h3>
+                <p>A working kitchen should have a minimum of two cooks (refer to diagram on next page).</p> 
+                <p>1st Cook (#1 on diagram) - You are responsible for beginning the assembly of the food. Typically, you:</p>
+                <ol>
+                    <li>Toast the bread products</li>
+                    <li>Get the paper wrap for the food</li>
+                    <li>Put all the condiments, vegetables, and/or cheeses on the bread (making any modifications if the customer has a special order).</li>
+                </ol>
+                <p>2nd Cook (#2 on diagram) - You are responsible for finishing the assembly of the food. Typically, you:</p>
+                <ol>
+                    <li>Add the meat/chicken</li>
+                    <li>Wrap the food</li>
+                    <li>Send it to the heated landing pad.</li>
+                </ol>
+                <p>3rd Cook (#3 on diagram) - Sometimes there is a 3rd cook during rush hours. Typically, you only:</p>
+                <ol>
+                    <li>Cook meat/chicken (essentially restocking)</li>
+                    <li>Restock condiments</li>
+                </ol>
+                <p>Hand them their order with a smile!</p>
+                <p>NOTE: This is the typical assembly line for burgers/sandwiches. This process differs for salads, McWraps, etc. We provide the process for the burgers/sandwiches because you’ll be using this process the most.</p>
+
+                <h3>Customer Service Lobby Responsibilities</h3>
+                <p>Cashiering - Working a cash register grants you certain responsibilities:</p>
+                <ul>
+                    <li>You are responsible for having enough the correct amount of cash in your register by the end of your shift (meaning you are not short on money)</li>
+                    <li>You must greet a customer when they walk in the restaurant</li>
+                    <li>It’s preferable to repeat the customer’s order to verify the order is correct.</li>
+                    <li>You are responsible for giving the customer their complete order. </li>
+                </ul>
+                <p>Money Handling - You are responsible for depositing your cash profits in the safe at the end of your shift. Training should educate you on how to properly deposit and leave $100 on the register.</p>
+                <p>Lobby clean up - Throughout the day, you will be asked to check the lobby. This means:</p>
+                <ul>
+                    <li>Sweeping (if necessary)</li>
+                    <li>Wiping down tables </li>
+                    <li>Returning dirty trays to the back</li>
+                    <li>Light Mopping (if necessary)</li>
+                    <li>Checking the trash cans (if they’re full, change the bag) At the end of your shift, you are responsible for giving a thorough clean to the whole lobby and bathrooms. You are also responsible for restocking all the cups, condiments, lids, etc. for the front.</li>
+                </ul>
+
+                <h3>Managerial Responsibilities:</h3>
+                <p> Organizing Crew Members - It is your responsibility to have a working number of staff numbers to operate the restaurant. You must accommodate if you will be missing any workers. If you do not find replacements or rearrange your workers, you will struggle throughout the day, especially during rush hours. You are expected to place employees in positions that you know will do their best in (Example: You know one employee is fast and is good at memorizing orders, so he/she should be placed at the 2nd Drive-Thru Window).</p>
+                <p>Customer Complaints - Training should educate on the proper process for documenting a customer complaint. Your coworkers should also know how to handle and alert you when a customer wants to file a complaint.</p>
+                <p>Money Handling - You are also responsible for ensuring that your coworkers make their deposits correctly. If you are the closing manager, you need to ensure that the day’s profits are complete and stored in the store safe. Training should provide you the basic knowledge on your restaurant’s computer system to document the day’s profits. </p>
+                <h3>Other Resources:</h3>
+                <ul>
+                    <li>Speak to a manager directly (each restaurant has their own specific set of rules)</li>
+                    <li><a href="http://www.mcdonalds.com/us/en/food/food_quality/see_what_we_are_made_of/inside_our_kitchens.html">http://www.mcdonalds.com/us/en/food/food_quality/see_what_we_are_made_of/inside_our_kitchens.html</a> - view online videos about more kitchen processes and recipes Speak to a manager directly (each restaurant has their own specific set of rules).</li>
+                    <li><a href="http://www.aboutmcdonalds.com/mcd/corporate_careers/training_and_development/hamburger_university.html">http://www.aboutmcdonalds.com/mcd/corporate_careers/training_and_development/hamburger_university.html</a> - learn more about management training</li>
+                </ul>
+
+            </div>
+
+            <div class="employeewages">
+                
+                <h2>Employee Wages</h2>
+
+                <h3>Employee Wages Pay Period</h3>
+                <p>You will receive your pay at least twice a month. Pay days are the 5th and 20th of every month. If that day falls on a weekend or a holiday, payout will not occur until the next working day. This restaurant does not permit advance pay prior to regular payday. </p>
+
+                <h3>Probationary Period</h3>
+                <p>All new employees, including management personnel, will be on probation for the first 180 days. At the end of the probationary period, the management team will evaluate your training rate of pay. The management team will also determine if you are a suitable employee and therefore remove your probationary period status.</p>
+
+                <h3>Other Resources:</h3>
+                <ul>
+                    <li><a href="http://www.glassdoor.com/Salary/McDonald-s-Salaries-E432.htm">http://www.glassdoor.com/Salary/McDonald-s-Salaries-E432.htm</a> - view salaries of other McDonald’s restaurants.</li>
+                </ul>
+
+            </div>
+
+            <div class="sexualharassment">
+
+                <h2>Sexual Harassment in the Workplace</h2>
+                <p>McDonald’s Sexual Harassment Policy McDonald’s strongly believes that all employees and applicants for employment should be treated fairly and without regard to race, color, sex, religion, national origin, age, disability, veteran’s status sexual orientation or any other prohibited basis. This applies to all employment practices, including recruiting, hiring, pay, performance reviews, training and development, promotions and other terms and conditions of employment.</p>
+                <p>Discrimination of harassment of a McDonald’s employee, whether by another employee, supplier, vendor or customer, will not be tolerated. McDonald’s will not tolerate any form of harassment, joking remarks, or other abusive conduct (including verbal, non-verbal, or physical conduct) that demeans or shows hostility toward an individual because of his/her race, color, sex, religion, national origin, age disability, veteran status, sexual orientation or other prohibited basis and that creates an intimidating, hostile or offensive work environment, unreasonably interferes with an individual’s work performance or otherwise adversely affects an individual’s employment opportunities. McDonald’s has ZERO tolerance for any form of sexual harassment of any employee, whether male or female. Sexual harassment is prohibited because it may be intimidating, an abuse of power, and is inconsistent with McDonald’s policies, practices and management philosophy. All employees are required to adhere to McDonald’s policy prohibiting discrimination and harassment while on McDonald’s premises, engaging in work-related activities, company sponsored training or other functions and at non-company activities when conduct at these would affect the work environment. An employee violating this policy will lead to disciplinary action up to and including discharge.</p>
+
+                <h3>Definition/Types of Sexual Harassment</h3>
+                <p>Sexual harassment is defined as unwelcomed sexual advances, requests for sexual favors, and certain other verbal, non-verbal or physical conduct which is sexual or based on gender that reasonably offended another person. Sexual harassment includes, but is not limited to:</p>
+                <ul>
+                    <li>Verbal harassment, including jokes, comments or threats relating to sexual activity, body parts, or other matters of a sexual nature.</li>
+                    <li>Non-verbal harassment, including staring at a person body in a sexually suggestive manner, sexually-related gestures or motions and/or circulating sexually suggestive material</li>
+                    <li>Physical conduct, including grabbing, holding, hugging, kissing, licking, massaging, displaying private body parts, unnecessary touching or other unwelcome physical conduct.</li>
+                    <li>An employment decision (including promotion, demotion, compensation, scheduling) made by a supervisor based on the employee’s submission to or rejection of sexual conduct.</li>
+                    <li>Submission to sexual conduct as an implicit or explicit condition of getting or keeping a job.</li>
+                    <li>Conduct that denigrates or shows hostility or aversion to a person because of his//her gender and creates an intimidating, hostile or offensive work environment.</li>
+                    <li>Any other sexual conduct that unreasonably interferes with another person’s work performance or creates an intimidating, hostile or offensive work environment or adversely affects another person’s employment opportunities.</li>
+                </ul>
+
+                <h3>Procedure on How to Report Sexual Harassment</h3>
+                <p>All McDonald’s employees hold the right to stop discriminatory, harassing and/or offensive behavior directing towards him/her. McDonald’s encourages employees to freely report incidents of discrimination or harassment without fear of reprisal. McDonald’s prohibits retaliation against any employee who has made a complaint about harassment or discrimination or has cooperated in the investigation of such a complaint. Retaliation includes any employment decision or other conduct made with the intent to punish an employee for complaining about or assisting in the investigation of discrimination or harassment. Any employee who feels subjected to discrimination or harassment should immediately report it to the Shift Manager. You can also report your complaint to the Area Supervisor or Owner as an alternative. Management employees who witness or receive reports of discriminatory or harassing behavior are required to immediately report these events to the Area Supervisor or Owner. Management employees who fail to make the report may be subject to discipline.</p>
+
+                <h3>Sexual Harassment Consequences</h3>
+                <p>McDonald’s will investigate your report thoroughly, keeping confidentiality. If the investigation uncovers that sexual harassment was in play, McDonald’s will take disciplinary action against the offender ranging from a warning to termination. Sexual Harassment towards the Customer McDonald’s employees are prohibited from discriminating against or harassing customers, suppliers and vendors, based on race, color, sex, religion, natural origin, disability, sexual orientation or any other unlawful reason, both in the course of work related activities and at company-sponsored training or functions. Management employees who witness or receive reports of discriminatory of harassing behavior are required to take appropriate action, including immediately reporting such behavior to the Area Supervisor or Owner.</p>
+            </div>
+
+            <div class="additionalresources">
+
+                <h2>Additional Resources</h2>
+                <ul>
+                    <li><a href="http://www.spaoa.org/">http://www.spaoa.org/</a> - Single Parents Alliance of America</li>
+                    <li><a href="http://www.singleparent411.org/">http://www.singleparent411.org/</a> - Single Parent Alliance and Resource Center</li>
+                    <li><a href="http://helpinghandsforsinglemoms.org/">http://helpinghandsforsinglemoms.org/</a> - Helping Hands for Single Moms For Students</li>
+                    <li><a href="http://www.aboutmcdonalds.com/mcd/student_zone.html">http://www.aboutmcdonalds.com/mcd/student_zone.html</a> - Student Zone</li>
+                    <li><a href="http://www.mcdonalds.com/us/en/careers/training_education.html">http://www.mcdonalds.com/us/en/careers/training_education.html</a> - Education</li>
+                    <li><a href="http://www.aboutmcdonalds.com/mcd/student_zone/scholarships.html">http://www.aboutmcdonalds.com/mcd/student_zone/scholarships.html</a> - Scholarships For Disabled Workers</li>
+                    <li><a href="http://www.mcdonalds.com/us/en/careers/benefits.html">http://www.mcdonalds.com/us/en/careers/benefits.html</a> - Benefits</li>
+                    <li><a href="http://www.aboutmcdonalds.com/mcd/corporate_careers/benefits/highlights_of_what_ we_offer/health_and_protection.html">http://www.aboutmcdonalds.com/mcd/corporate_careers/benefits/highlights_of_what_ we_offer/health_and_protection.html</a> - Health and Protection Policy Contact Corporate</li>
+                    <li><a href="http://www.mcdonalds.com/us/en/contact_us.html">http://www.mcdonalds.com/us/en/contact_us.html</a> - Online Research</li>
+                </ul>
+                <p>Call HQ 1-800-244-6227 7 days a week 7:00 a.m. to 7:00 p.m. CST</p>
+                <p>Write to HQ McDonald's Corporation, 2111 McDonald's Dr., Oak Brook, IL 60523</p>
+
+            </div>
+
+            <div class="conclusion">
+
+                <h3>Conclusion</h3>
+                <p>To conclude, we have provided one last helpful set of guidelines to ensure your success here at McDonald’s.</p>
+                <div class="do">
+                    <h3>Do:</h3>
+                    <ul>
+                        <li>Come to work on time, and on the correct scheduled days.</li>
+                        <li>Come to work with a clean uniform, nametag, hat, and good personal hygiene</li>
+                        <li>Treat all customers and fellow employees with respect and always show a warm, outgoing manner</li>
+                        <li>Follow all McDonald’s standards for food preparation, serving, and sanitation</li>
+                        <li>If you are going to call in, call at least four hours prior to the start of your shift. </li>
+                    </ul>
+                </div>
+                <div class="do">
+                    <h3>Do not:</h3>
+                    <ul>
+                        <li>Use company equipment without permission for purposes other than company business</li>
+                        <li>Steal company property, or property of customers or employees.</li>
+                        <li>Give away free food or Happy Meal toys</li>
+                        <li>Alter or falsify production or other company records</li>
+                        <li>Falsify employee records</li>
+                        <li>Come to work under the influence of alcohol or drugs</li>
+                        <li>Drink or use drugs while on duty</li>
+                        <li>Post, deface, or remove notices, signs or writing on bulletin boards without prior authorization</li>
+                        <li>Make false, vicious, profane, or malicious statements concerning any employees, McDonald’s products or its customers </li>
+                        <li>Disrespect fellow employees and customers</li>
+                        <li>Emit behavior that may reflect unfavorably on our restaurant or McDonald’s Corporation</li>
+                        <li>Insubordinate management or any McDonald’s representatives.</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <p class="subtitle">We’ve done our job to provide you the tools and knowledge of how this company works. You are all set to begin working at McDonald’s! Good luck and Welcome to McDonald’s!</p>
+            
+        </div>
+        
+        <div class="body2">
+            
+            <div class="introduction">
+
+                <h2>Introduction</h2>
+                <p>Welcome to McDonald’s! Congratulations! You are now a McDonald’s employee. This might be your first job, a temporary job, or you might have transitioned to another McDonald’s restaurant. In any case, we welcome you to the McDonald’s family. This manual is a tool for you to use throughout your employment at McDonald’s. This manual covers job requirements, job functions, wage information, sexual harassment in the workplace, and provides additional resources. The sole purpose of this manual is to guide you in any time of need while you’re working at McDonald’s. If this manual does not solve a problem or question you might have, additional resources are listed to guide you to the right places. We hope you are successful here at McDonald’s, and we hope to enhance your success by providing this new employee manual. Good Luck!</p>
+
+            </div>
+
+            <div class="jobrequirements">
+
+                <h2>Employee Job Requirements</h2>
+                <p>McDonald’s has certain guidelines for each of our employees to follow. These are the specific job requirements for: Restaurant # 16866 – 756 W. Main St. Lewisville, TX 75067.</p>
+
+                <h3>Employee Uniforms</h3>
+                <p>New employees will be provided:</p>
+                <ul>
+                    <li>Uniform shirts</li>
+                    <li>Hat</li>
+                    <li>Nametag</li>
+                </ul>
+                <p>You must provide your own pants. Acceptable uniform pants are black dress pants. Unacceptable pants include, but are not limited to:</p>
+                <ul>
+                    <li>Jencos</li>
+                    <li>Wide-legged jeans</li>
+                    <li>Jeans with wide stitching on the seams</li>
+                    <li>Warm-up pants</li>
+                    <li>Running suit pants</li>
+                </ul>
+                <p>You are responsible for cleaning and maintaining your uniform.You may not come in to work if you are not completely dressed in uniform (shirt, pants, hat, and nametag).</p>
+                <p>An employee must follow these guidelines regarding employee appearance:</p>
+                <ul>
+                    <li>Limited size and amount of jewelry is allowed</li>
+                    <li>Hair styles should not draw any attention (e.g. hair color, height, length, and objects worn in hair). All employees must wear a hat or visor when on duty</li>
+                    <li>Long or artificial nails are not permitted. Also, fingernail polish is not allowed.</li>
+                    <li>A clean-shaven appearance is preferred on all males. The only facial hair allowed is a moustache that does not exceed the corners of the mouth. Goatees are not allowed. </li>
+                    <li>All employees must wear complete McDonald’s uniforms</li>
+                    <li>No earrings on males are allowed</li>
+                    <li>No tongue rings, tongue studs, nose rings, or any other facial rings are allowed while on duty</li>
+                    <li>Chewing gum and drinking beverages of any kind are not allowed while on duty</li>
+                </ul>
+                <p>Here are examples of what an acceptable appearance looks like for managers (left) and crew (right) shown to the right.</p>
+                <p>Employee Meals: You may purchase any menu item for ½ price only during break while on duty. Any store specials cannot be bought for ½ price. Items off the Dollar Menu cannot be bought for ½ price if those are the only items you are buying. Employees do not receive any kind of discounts while off duty or for family and friends.</p>
+                <p>Employee Loitering: You are expected to arrive early when coming to work. Employees who have finished their shift are requested to leave the premises as soon as possible. Off duty employees are not permitted to loiter on McDonald’s premises or disturb working employees.</p>
+                <h3>Other Resources:</h3>
+                <ul>
+                    <li>Speak to a manager directly (each restaurant has their own specific set of rules).</li>
+                    <li><a href="http://www.waytobeuniforms.com/">http://www.waytobeuniforms.com/</a> - create a free MAC account to view Mcdonald's full apparel Collection</li>
+                    <li><a href="http://www.waytobe.com/uniforms.html">http://www.waytobe.com/uniforms.html</a> - learn more about McDonald’s uniform suppliers Employee Appearance</li>
+                    <li><a href="http://www.mcdonalds.com/us/en/full_menu_explorer.html">http://www.mcdonalds.com/us/en/full_menu_explorer.html</a> - view full menu items.</li>
+                </ul>
+
+            </div>
+
+            <div class="jobfunctions">
+
+                <h2>Employee Job Functions</h2>
+                <p>This chapter lists out the basic job functions and responsibilities of each worker position.</p>
+
+                <p>Drive-Thru Responsibilities 1st Window (Pay Here): Training should provide you a basic understanding of where each menu item is located on the register. When taking an order, you should:</p>
+                <ol>
+                    <li>Greet the customer (Example: Welcome to McDonald’s, may I take your order?).</li>
+                    <li>Take the order (asking every once in a while, anything else? or will that be all?)</li>
+                    <li>When the customer is finished ordering, verify their order is correct (Example: Is your order correct on the screen?) by having them read their order on the screen as in the picture shown on the right. This is especially important if they added specifications to their order.</li>
+                    <li>Tell the customer their total and say Thank You. </li>
+                </ol>
+
+                <p>When the customer arrives at your window:</p>
+                <ol>
+                    <li>Greet them again (Example: Hello, how are you sir/ma’am?) with a smile.</li>
+                    <li>During rush hours, it’s very convenient to repeat the order to the customer, so as to not charge them wrong.</li>
+                    <li>Repeat their total.</li>
+                    <li>Charge their order</li>
+                    <li>Return their change/card and their receipt and give them a farewell (Example: Have a nice day!)</li>
+                </ol>
+
+                <p>2nd Window (Pick-Up Here) - Training should provide you basic understanding of how the screens displaying orders work and what buttons you should press and so on. For each order, you should:</p>
+                <ol>
+                    <li>Gather all the drinks (These include: fountain drinks, McCafe drinks, milkshakes, McFlurries, milks, juice boxes)</li>
+                    <li>Greet the customer (Example: Hello, how are you?) with a smile. A customer should verify their order is correct</li>
+                    <li>Tell them what their drinks are and hand them to the customers (if you repeat their order, the customer will know if the order was taken wrong and you can fix it at the window).</li>
+                    <li>Gather the food bag. Check to make sure all the food is in the bag. It is your responsibility that all the food is in the bag before handing it to the customer.</li>
+                    <li>Repeat their food order briefly (Example: cheeseburgers and a fry) while handing them their bag (again this would clarify any mistakes when their order was taken) with a smile as shown in the picture to the right. NOTE: You risk losing your job if you give away any free food or drinks, Happy Meal toys or any other products.</li>
+                    <li>Say Thank You and give them a farewell.</li>
+                </ol>
+
+                <h3>Kitchen Reponsibilities:</h3>
+                <p>A working kitchen should have a minimum of two cooks (refer to diagram on next page).</p> 
+                <p>1st Cook (#1 on diagram) - You are responsible for beginning the assembly of the food. Typically, you:</p>
+                <ol>
+                    <li>Toast the bread products</li>
+                    <li>Get the paper wrap for the food</li>
+                    <li>Put all the condiments, vegetables, and/or cheeses on the bread (making any modifications if the customer has a special order).</li>
+                </ol>
+                <p>2nd Cook (#2 on diagram) - You are responsible for finishing the assembly of the food. Typically, you:</p>
+                <ol>
+                    <li>Add the meat/chicken</li>
+                    <li>Wrap the food</li>
+                    <li>Send it to the heated landing pad.</li>
+                </ol>
+                <p>3rd Cook (#3 on diagram) - Sometimes there is a 3rd cook during rush hours. Typically, you only:</p>
+                <ol>
+                    <li>Cook meat/chicken (essentially restocking)</li>
+                    <li>Restock condiments</li>
+                </ol>
+                <p>Hand them their order with a smile!</p>
+                <p>NOTE: This is the typical assembly line for burgers/sandwiches. This process differs for salads, McWraps, etc. We provide the process for the burgers/sandwiches because you’ll be using this process the most.</p>
+
+                <h3>Customer Service Lobby Responsibilities</h3>
+                <p>Cashiering - Working a cash register grants you certain responsibilities:</p>
+                <ul>
+                    <li>You are responsible for having enough the correct amount of cash in your register by the end of your shift (meaning you are not short on money)</li>
+                    <li>You must greet a customer when they walk in the restaurant</li>
+                    <li>It’s preferable to repeat the customer’s order to verify the order is correct.</li>
+                    <li>You are responsible for giving the customer their complete order. </li>
+                </ul>
+                <p>Money Handling - You are responsible for depositing your cash profits in the safe at the end of your shift. Training should educate you on how to properly deposit and leave $100 on the register.</p>
+                <p>Lobby clean up - Throughout the day, you will be asked to check the lobby. This means:</p>
+                <ul>
+                    <li>Sweeping (if necessary)</li>
+                    <li>Wiping down tables </li>
+                    <li>Returning dirty trays to the back</li>
+                    <li>Light Mopping (if necessary)</li>
+                    <li>Checking the trash cans (if they’re full, change the bag) At the end of your shift, you are responsible for giving a thorough clean to the whole lobby and bathrooms. You are also responsible for restocking all the cups, condiments, lids, etc. for the front.</li>
+                </ul>
+
+                <h3>Managerial Responsibilities:</h3>
+                <p> Organizing Crew Members - It is your responsibility to have a working number of staff numbers to operate the restaurant. You must accommodate if you will be missing any workers. If you do not find replacements or rearrange your workers, you will struggle throughout the day, especially during rush hours. You are expected to place employees in positions that you know will do their best in (Example: You know one employee is fast and is good at memorizing orders, so he/she should be placed at the 2nd Drive-Thru Window).</p>
+                <p>Customer Complaints - Training should educate on the proper process for documenting a customer complaint. Your coworkers should also know how to handle and alert you when a customer wants to file a complaint.</p>
+                <p>Money Handling - You are also responsible for ensuring that your coworkers make their deposits correctly. If you are the closing manager, you need to ensure that the day’s profits are complete and stored in the store safe. Training should provide you the basic knowledge on your restaurant’s computer system to document the day’s profits. </p>
+                <h3>Other Resources:</h3>
+                <ul>
+                    <li>Speak to a manager directly (each restaurant has their own specific set of rules)</li>
+                    <li><a href="http://www.mcdonalds.com/us/en/food/food_quality/see_what_we_are_made_of/inside_our_kitchens.html">http://www.mcdonalds.com/us/en/food/food_quality/see_what_we_are_made_of/inside_our_kitchens.html</a> - view online videos about more kitchen processes and recipes Speak to a manager directly (each restaurant has their own specific set of rules).</li>
+                    <li><a href="http://www.aboutmcdonalds.com/mcd/corporate_careers/training_and_development/hamburger_university.html">http://www.aboutmcdonalds.com/mcd/corporate_careers/training_and_development/hamburger_university.html</a> - learn more about management training</li>
+                </ul>
+
+            </div>
+
+            <div class="employeewages">
+                
+                <h2>Employee Wages</h2>
+
+                <h3>Employee Wages Pay Period</h3>
+                <p>You will receive your pay at least twice a month. Pay days are the 5th and 20th of every month. If that day falls on a weekend or a holiday, payout will not occur until the next working day. This restaurant does not permit advance pay prior to regular payday. </p>
+
+                <h3>Probationary Period</h3>
+                <p>All new employees, including management personnel, will be on probation for the first 180 days. At the end of the probationary period, the management team will evaluate your training rate of pay. The management team will also determine if you are a suitable employee and therefore remove your probationary period status.</p>
+
+                <h3>Other Resources:</h3>
+                <ul>
+                    <li><a href="http://www.glassdoor.com/Salary/McDonald-s-Salaries-E432.htm">http://www.glassdoor.com/Salary/McDonald-s-Salaries-E432.htm</a> - view salaries of other McDonald’s restaurants.</li>
+                </ul>
+
+            </div>
+
+            <div class="sexualharassment">
+
+                <h2>Sexual Harassment in the Workplace</h2>
+                <p>McDonald’s Sexual Harassment Policy McDonald’s strongly believes that all employees and applicants for employment should be treated fairly and without regard to race, color, sex, religion, national origin, age, disability, veteran’s status sexual orientation or any other prohibited basis. This applies to all employment practices, including recruiting, hiring, pay, performance reviews, training and development, promotions and other terms and conditions of employment.</p>
+                <p>Discrimination of harassment of a McDonald’s employee, whether by another employee, supplier, vendor or customer, will not be tolerated. McDonald’s will not tolerate any form of harassment, joking remarks, or other abusive conduct (including verbal, non-verbal, or physical conduct) that demeans or shows hostility toward an individual because of his/her race, color, sex, religion, national origin, age disability, veteran status, sexual orientation or other prohibited basis and that creates an intimidating, hostile or offensive work environment, unreasonably interferes with an individual’s work performance or otherwise adversely affects an individual’s employment opportunities. McDonald’s has ZERO tolerance for any form of sexual harassment of any employee, whether male or female. Sexual harassment is prohibited because it may be intimidating, an abuse of power, and is inconsistent with McDonald’s policies, practices and management philosophy. All employees are required to adhere to McDonald’s policy prohibiting discrimination and harassment while on McDonald’s premises, engaging in work-related activities, company sponsored training or other functions and at non-company activities when conduct at these would affect the work environment. An employee violating this policy will lead to disciplinary action up to and including discharge.</p>
+
+                <h3>Definition/Types of Sexual Harassment</h3>
+                <p>Sexual harassment is defined as unwelcomed sexual advances, requests for sexual favors, and certain other verbal, non-verbal or physical conduct which is sexual or based on gender that reasonably offended another person. Sexual harassment includes, but is not limited to:</p>
+                <ul>
+                    <li>Verbal harassment, including jokes, comments or threats relating to sexual activity, body parts, or other matters of a sexual nature.</li>
+                    <li>Non-verbal harassment, including staring at a person body in a sexually suggestive manner, sexually-related gestures or motions and/or circulating sexually suggestive material</li>
+                    <li>Physical conduct, including grabbing, holding, hugging, kissing, licking, massaging, displaying private body parts, unnecessary touching or other unwelcome physical conduct.</li>
+                    <li>An employment decision (including promotion, demotion, compensation, scheduling) made by a supervisor based on the employee’s submission to or rejection of sexual conduct.</li>
+                    <li>Submission to sexual conduct as an implicit or explicit condition of getting or keeping a job.</li>
+                    <li>Conduct that denigrates or shows hostility or aversion to a person because of his//her gender and creates an intimidating, hostile or offensive work environment.</li>
+                    <li>Any other sexual conduct that unreasonably interferes with another person’s work performance or creates an intimidating, hostile or offensive work environment or adversely affects another person’s employment opportunities.</li>
+                </ul>
+
+                <h3>Procedure on How to Report Sexual Harassment</h3>
+                <p>All McDonald’s employees hold the right to stop discriminatory, harassing and/or offensive behavior directing towards him/her. McDonald’s encourages employees to freely report incidents of discrimination or harassment without fear of reprisal. McDonald’s prohibits retaliation against any employee who has made a complaint about harassment or discrimination or has cooperated in the investigation of such a complaint. Retaliation includes any employment decision or other conduct made with the intent to punish an employee for complaining about or assisting in the investigation of discrimination or harassment. Any employee who feels subjected to discrimination or harassment should immediately report it to the Shift Manager. You can also report your complaint to the Area Supervisor or Owner as an alternative. Management employees who witness or receive reports of discriminatory or harassing behavior are required to immediately report these events to the Area Supervisor or Owner. Management employees who fail to make the report may be subject to discipline.</p>
+
+                <h3>Sexual Harassment Consequences</h3>
+                <p>McDonald’s will investigate your report thoroughly, keeping confidentiality. If the investigation uncovers that sexual harassment was in play, McDonald’s will take disciplinary action against the offender ranging from a warning to termination. Sexual Harassment towards the Customer McDonald’s employees are prohibited from discriminating against or harassing customers, suppliers and vendors, based on race, color, sex, religion, natural origin, disability, sexual orientation or any other unlawful reason, both in the course of work related activities and at company-sponsored training or functions. Management employees who witness or receive reports of discriminatory of harassing behavior are required to take appropriate action, including immediately reporting such behavior to the Area Supervisor or Owner.</p>
+            </div>
+
+            <div class="additionalresources">
+
+                <h2>Additional Resources</h2>
+                <ul>
+                    <li><a href="http://www.spaoa.org/">http://www.spaoa.org/</a> - Single Parents Alliance of America</li>
+                    <li><a href="http://www.singleparent411.org/">http://www.singleparent411.org/</a> - Single Parent Alliance and Resource Center</li>
+                    <li><a href="http://helpinghandsforsinglemoms.org/">http://helpinghandsforsinglemoms.org/</a> - Helping Hands for Single Moms For Students</li>
+                    <li><a href="http://www.aboutmcdonalds.com/mcd/student_zone.html">http://www.aboutmcdonalds.com/mcd/student_zone.html</a> - Student Zone</li>
+                    <li><a href="http://www.mcdonalds.com/us/en/careers/training_education.html">http://www.mcdonalds.com/us/en/careers/training_education.html</a> - Education</li>
+                    <li><a href="http://www.aboutmcdonalds.com/mcd/student_zone/scholarships.html">http://www.aboutmcdonalds.com/mcd/student_zone/scholarships.html</a> - Scholarships For Disabled Workers</li>
+                    <li><a href="http://www.mcdonalds.com/us/en/careers/benefits.html">http://www.mcdonalds.com/us/en/careers/benefits.html</a> - Benefits</li>
+                    <li><a href="http://www.aboutmcdonalds.com/mcd/corporate_careers/benefits/highlights_of_what_ we_offer/health_and_protection.html">http://www.aboutmcdonalds.com/mcd/corporate_careers/benefits/highlights_of_what_ we_offer/health_and_protection.html</a> - Health and Protection Policy Contact Corporate</li>
+                    <li><a href="http://www.mcdonalds.com/us/en/contact_us.html">http://www.mcdonalds.com/us/en/contact_us.html</a> - Online Research</li>
+                </ul>
+                <p>Call HQ 1-800-244-6227 7 days a week 7:00 a.m. to 7:00 p.m. CST</p>
+                <p>Write to HQ McDonald's Corporation, 2111 McDonald's Dr., Oak Brook, IL 60523</p>
+
+            </div>
+
+            <div class="conclusion">
+
+                <h3>Conclusion</h3>
+                <p>To conclude, we have provided one last helpful set of guidelines to ensure your success here at McDonald’s.</p>
+                <div class="do">
+                    <h3>Do:</h3>
+                    <ul>
+                        <li>Come to work on time, and on the correct scheduled days.</li>
+                        <li>Come to work with a clean uniform, nametag, hat, and good personal hygiene</li>
+                        <li>Treat all customers and fellow employees with respect and always show a warm, outgoing manner</li>
+                        <li>Follow all McDonald’s standards for food preparation, serving, and sanitation</li>
+                        <li>If you are going to call in, call at least four hours prior to the start of your shift. </li>
+                    </ul>
+                </div>
+                <div class="do">
+                    <h3>Do not:</h3>
+                    <ul>
+                        <li>Use company equipment without permission for purposes other than company business</li>
+                        <li>Steal company property, or property of customers or employees.</li>
+                        <li>Give away free food or Happy Meal toys</li>
+                        <li>Alter or falsify production or other company records</li>
+                        <li>Falsify employee records</li>
+                        <li>Come to work under the influence of alcohol or drugs</li>
+                        <li>Drink or use drugs while on duty</li>
+                        <li>Post, deface, or remove notices, signs or writing on bulletin boards without prior authorization</li>
+                        <li>Make false, vicious, profane, or malicious statements concerning any employees, McDonald’s products or its customers </li>
+                        <li>Disrespect fellow employees and customers</li>
+                        <li>Emit behavior that may reflect unfavorably on our restaurant or McDonald’s Corporation</li>
+                        <li>Insubordinate management or any McDonald’s representatives.</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <p class="subtitle">We’ve done our job to provide you the tools and knowledge of how this company works. You are all set to begin working at McDonald’s! Good luck and Welcome to McDonald’s!</p>
+            
+        </div>
+    </body>
+</html>
