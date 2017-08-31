@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <title>Gong Pong Team</title>
+        <style>
+            
+            * {padding:0; margin:0; outline: 1pt solid aqua;}
+            body {font-size: 20pt; position: relative; height: 100vh; font-family: sans-serif;}
+            br {text-indent: 50px;}
+            .outer {position: relative; display: inline-block;}
+            .inner {position: relative;}
+            .div1 {height: 20vh; width: 40vw; font-size: 100px;}
+            .div2 {height: 20vh; width: 40vw; font-size: 50px;}
+            .div3 {height: 20vh; width: 10vw; font-size: 50px;}
+            .div4 {height: 10vh; width: 90vw; font-size: 100px; margin-bottom: 40vh; }
+            .div5 {height: 40vh; width: 100vw; font-size: 100px;}
+            p {position: absolute;}
+            
+            #like {font-size: 10pt; top: 40vh; left: 20vw; position: fixed; transform: scale(10,10);}
+            
+            .div4 p {animation: moveX 1.1s linear 0s infinite alternate, moveY 0.7s linear 0s infinite alternate; }
+            span {letter-spacing: -50pt;}
+            
+            @keyframes moveX {
+                from {left:0;}
+                to {left:100%;}
+            }
+            
+            @keyframes moveY {
+                from {top:0;}
+                to {top:100%;}
+            }
+            
+            
+            
+        </style>
+    </head>
+    <body>
+            <p id="like">👍</p>
+        
+            <div class="div1 outer"><div class="div1 inner"><p>21.09.<span> </span>2014</p>
+            </div></div>
+        
+            <div class="div2 outer"><div class="div2 inner"><p>WWW.<span> </span>FACEBOOK.<span> </span>COM/<span> </span>GONG<span> </span>PONG<span> </span>TEAM</p></div></div>
+        
+            <div class="div3 outer"><div class="div3 inner"><p>P.<span> </span>P.<span> </span>C.<span> </span>M.<span> </span></p></div></div>
+        
+        <div class="div4 outer">
+            <div class="div4 inner">
+                <p>P<span> </span>O<span> </span>N<span> </span>G<br>G<span> </span>O<span> </span>N<span> </span>G<span> </span> TEAM</p>
+            </div>
+        </div>
+        
+            <div class="div5 outer"><div class="div5 inner"><p>AT<span> </span>STRELKA<span> </span>TEAM<span> </span>CUP<span> </span>MESTCHERKIN + MANDELSHTAM + FEDOTOV</p></div></div>
+        
+        
+        
+    </body>
+</html>

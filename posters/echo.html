@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <title>echo</title>
+        <style>
+            
+            * {padding:0; margin:0;}
+            
+            body {display: flex; flex-wrap: wrap; background-color: black; overflow: hidden;} 
+            
+            p {visibility: hidden; pointer-events: none;}
+            p.show {visibility: visible; pointer-events: auto;}
+            
+            .column {width: calc(100vw / 3); position: relative; height: 100vh; top: 0; left: auto;}
+            .column.start {position: absolute; left: calc(100vw / 3);}
+            
+            .echo {text-align: center; font-size: 20vh; z-index: 3; position: absolute; top: 0; line-height: 15vh; margin: 3vw; transition: opacity 0.3s; filter: blur(0); opacity: 1;}
+            
+            .row { font-family: sans-serif; margin: 1vh; margin-bottom: 22vh; position: relative; font-size: 2vh; line-height: 2vh; text-align: justify; text-align-last: justify; filter: blur(2px); opacity: 0.7; transition: filter 0.1s;}
+            
+            #column2:hover .row {filter: blur(0); opacity: 1;}
+            #column2:hover .row {filter: blur(0); opacity: 1;}
+            #column2:hover .echo {opacity: 0;}
+            
+            span {letter-spacing: -100pt;}
+            
+            #column1 {background: linear-gradient(to left, white 0%, black 50%);}
+            #column2 {background-color: white; z-index: 2;}
+            #column2.start {background-color: black;}
+            #column3 {background: linear-gradient(to right, white 0%, black 50%);}
+            
+            .circle {width: 30vw; height: 30vw; position: absolute; background-color: black; border-radius: 100vw; bottom: calc(50vh - 15vw); margin-left: calc(5vw / 3); transition: all 3s; opacity: 0.8; animation: circleanim 2s ease-in-out 1;}
+            .circle.start {top: calc(50vh - 15vw); bottom: calc(50vh - 15vw);}
+            
+            .blackcircle, .gradientcircle1 {bottom: auto; top: calc(5vw / 3);}
+            
+            .gradientcircle2, .imagecircle {bottom: calc(5vw / 3);}
+            .gradientcircle1 {background: linear-gradient(to bottom, blue 0%,dodgerblue 25%,lightgreen 50%,yellow 75%);}
+            .gradientcircle2 {background: linear-gradient(to top, blue 0%,dodgerblue 25%,lightgreen 50%,yellow 75%);}
+            .imagecircle {background-color: antiquewhite;}
+            
+            /*@keyframes circleanim{
+                0% {top: calc(50vh - 15vw); bottom: calc(50vh - 15vw);}
+                40% {top: calc(50vh - 15vw); bottom: calc(50vh - 15vw);}
+            }*/
+            
+        </style>
+        
+        <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+            <script>
+            $(document).ready(function() {
+                
+                    $('.row').fadeOut(0).delay(6500).fadeIn(0).addClass('show');
+                    $('.echo').fadeOut(0).delay(4500).fadeIn(0).addClass('show');
+                    $('.column').fadeOut(0).fadeIn(2000).removeClass('start');
+                    $('.circle').delay(1),
+                    $(this).removeClass('start');
+               
+            });
+        </script>               
+    </head>
+    <body>
+        
+        <div class="column start" id="column1">
+            <div class="gradientcircle2 circle start"></div>
+            <div class="blackcircle circle start"></div>
+        </div>
+        
+        <div class="column start" id="column2">
+            <div class="imagecircle circle start"></div>
+            <div class="gradientcircle1 circle start"></div>
+            <p class="row">28 11 - 7 11</p>
+            <p class="row">2<span> </span>0<span> </span>1<span> </span>5</p>
+            <p class="row">H<span> </span>O<span> </span>F<span> </span>-</p>
+            <p class="row">K<span> </span>I<span> </span>R<span> </span>C<span> </span>H<span> </span>E</p>
+            <p class="row">L<span> </span>U<span> </span>Z<span> </span>E<span> </span>R<span> </span>N</p>
+            <p class="echo">ECHO<span> </span>-OR<span> </span>GEL<br>FEST<span> </span>IVAL</p>
+        </div>
+        
+        <div class="column start" id="column3">
+            <div class="gradientcircle2 circle start"></div>
+            <div class="blackcircle circle start"></div>
+        </div>
+        
+        <audio autoplay>
+  <source src="http://nastypanda.com/wp-content/01%20-%20Intervention.mp3" type="audio/mp3">
+        </audio>
+        
+    </body>
+</html>
