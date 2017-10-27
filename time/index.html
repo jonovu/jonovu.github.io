@@ -1,0 +1,147 @@
+<!doctype html>
+    <html>
+        <head>
+            <title>Time</title>
+            <script src="https://use.typekit.net/ljq7omx.js"></script>
+            <script>try{Typekit.load({ async: true });}catch(e){}</script>
+            <style>
+                
+                * {margin:0; padding: 0;}
+                
+                body {background-color: black;}
+                
+                p {
+                    margin-left: 30pt;
+                    /*-webkit-filter: url('#goo');*/
+                    margin-top: 24pt;
+                }
+                
+                p:first-child {margin-top: 20pt;}
+                
+                span, p {
+                    font-size: 45pt;
+                    font-family: "capitolium-2";
+                    font-weight: 300;
+                    line-height: 52pt;
+                    color: #999999;
+                    letter-spacing: 0.1pt;
+                    
+                }
+                .subtitle {font-size: 31.5pt; position: absolute; margin-top: 70pt; animation: fadesub 2.4s forwards; animation-delay: 26.2s; font-family: domaine text test; font-weight: 400;}
+                
+                span {
+                    animation: fade 6s forwards;
+                    opacity: 0;
+                }
+                
+                
+                @keyframes fade {
+                    0% {opacity:0; color: white;}
+                    20% {color: white; opacity: 1;}
+                    100% {opacity:1;}
+                }
+                
+                @keyframes fadesub {
+                    0% {opacity:0;}
+                    100% {opacity:1;}
+                }
+                
+                #ive {animation-delay: 1s}
+                #seen {animation-delay: 3s}
+                #things {animation-delay: 3.7s}
+                #you {animation-delay: 4.4s}
+                #people {animation-delay: 4.9s}
+                #wouldnt {animation-delay: 5.5s}
+                #believe {animation-delay: 6.3s}
+                #e1 {animation-delay: 6.9s}
+                #e2 {animation-delay: 7.3s}
+                #e3 {animation-delay: 7.7s}
+                #all {animation-delay: 10s}
+                #those {animation-delay: 10.6s}
+                #moments {animation-delay: 11.9s}
+                #will {animation-delay: 13s}
+                #be {animation-delay: 13.4s}
+                #lost {animation-delay: 13.8s}
+                #in1 {animation-delay: 14.7s}
+                #time {animation-delay: 15.5s}
+                #comma {animation-delay: 15.9s}
+                #like {animation-delay: 18.7s}
+                #tears {animation-delay: 19.6s}
+                #in2 {animation-delay: 21.4s}
+                #rain {animation-delay: 22.6s}
+                #period {animation-delay: 23.8s}
+                
+                .dot {animation: fadediv 12s forwards; height: 20px; width: 20px; position: fixed; border-radius: 20px;}
+                
+                @keyframes fadediv {
+                    0% {opacity:0; background-color: white;}
+                    20% {background-color: white; opacity: 1;}
+                    100% {opacity:1; background-color: transparent;}
+                }
+                
+                /*#d1 {animation-delay: 9.2s; top: 71%; left: 14%;}
+                #d2 {animation-delay: 11s; top: 57%; left: 53%;}*/
+                #d3 {animation-delay: 12.5s; top: 36%; left: 40%;}
+                #d4 {animation-delay: 14.5s; top: 43%; left: 77%;}
+                #d5 {animation-delay: 15.7s; top: 35%; left: 89%;}
+                #d6 {animation-delay: 17.2s; top: 30%; left: 48%;}
+                #d7 {animation-delay: 19.3s; top: 12%; left: 30%;}
+                /*#d8 {animation-delay: 21s; top: 22%; left: 27%;}
+                #d9 {animation-delay: 18s; top: 20%; left: 40%;}
+                #d10 {animation-delay: 20s; top: 22%; left: 58%;}
+                #d11 {animation-delay: 20.6s; top: 61%; left: 46%;}
+                #d12 {animation-delay: 21.7s; top: 11%; left: 71%;}
+                #d13 {animation-delay: 22.2s; top: 28%; left: 75%;}
+                #d14 {animation-delay: 23.4s; top: 31%; left: 47%;}*/
+                
+                
+                
+            </style>
+            <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+            <script>
+            $(document).ready(function() {
+                
+            });
+            </script>
+        </head>
+        <body>
+            
+            <div class="dotswrapper">
+                <div class="dot" id="d1"></div>
+                <div class="dot" id="d2"></div>
+                <div class="dot" id="d3"></div>
+                <div class="dot" id="d4"></div>
+                <div class="dot" id="d5"></div>
+                <div class="dot" id="d6"></div>
+                <div class="dot" id="d7"></div>
+                <div class="dot" id="d8"></div>
+                <div class="dot" id="d9"></div>
+                <div class="dot" id="d10"></div>
+                <div class="dot" id="d11"></div>
+                <div class="dot" id="d12"></div>
+                <div class="dot" id="d13"></div>
+                <div class="dot" id="d14"></div>
+            </div>
+            
+            <p><span id="ive">I've</span> <span id="seen">seen</span> <span id="things">things</span> <span id="you">you</span> <span id="people">people</span> <span id="wouldnt">wouldn't</span> <span id="believe">believe</span><span id="e1">.</span><span id="e2">.</span><span id="e3">.</span></p>
+            
+            <p><span id="all">All</span> <span id="those">those</span> <span id="moments">moments</span> <span id="will">will</span> <span id="be">be</span> <span id="lost">lost</span> <span id="in1">in</span> <span id="time">time</span><span id="comma">,</span>
+                
+            <br>
+                
+            <span id="like">like</span> <span id="tears">tears</span> <span id="in2">in</span> <span id="rain">rain</span><span id="period">.</span></p>
+            
+            <p><span class="subtitle">&ndash; Rutger Hauer as Roy Batty in <i>Blade Runner</i></span></p>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 2 -2" result="goo" />
+                  <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                </filter>
+              </defs>
+            </svg>
+
+        </body>
+</html>

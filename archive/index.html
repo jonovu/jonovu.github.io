@@ -1,0 +1,308 @@
+
+    <!doctype html>
+    <html>
+        <head>
+            <title>Archive</title>
+            <style>
+    
+                * {margin: 0; padding: 0; outline: 1pt solid aqua;}
+                
+                body {overflow: hidden;}
+    
+                /*body {column-count: 5;}*/
+                
+                div.menu {position: fixed; z-index: 1;}
+                
+                div.huge {animation: autoscroll 200s linear infinite;}
+                
+                div.lightboxactive {height: 0;}
+                
+                div.huge.nightmode {animation-duration: 2s; background-color: blue;}
+                
+                @keyframes autoscroll {
+                    0% {transform: translateY(-100%);}
+                    100% {transform: translateY(0%);}
+                }
+    
+                div.outer {display: none; white-space: nowrap;}
+                
+                .outer.naughtydisplay, .outer.nicedisplay, .outer.kikdisplay, .outer.revengedisplay, .outer.wowdisplay, .outer.strategicdisplay, .outer.questiondisplay, .outer.saddisplay {display: inline-flex;}
+                
+                /*div.outer > div > p {visibility: hidden;}*/
+                
+                div.outer > div > p {opacity: 0.1;}
+                
+                div.outer > div:hover > p {color: blue; opacity: 1;}
+                
+                .outer > div.lightboxactive > p {display: none;}
+                
+                span {display: none; font-size: 40pt; white-space: normal; text-align: left; margin-top: 30vh; margin-left: 10vw; margin-right: 10vw; position: fixed; min-width: 1000px;}
+                
+                span.nightmode {font-size: 12pt; color: red;}
+                
+                .outer > div.lightboxactive > span {display: block;}
+    
+                .outer {transform: translateX(0);}
+    
+                p {font-size: 50pt; font-family: chalkboard; font-variant-caps: normal; text-transform: uppercase; cursor:default; animation: pan 20s linear infinite;}
+                
+                p.nightmode {animation: none;}
+                
+                @keyframes pan {
+                    0% {transform: translateX(0);}
+                    100% {transform: translateX(-50%);}
+                }
+                
+                p.smallfont {font-size: 12pt;}
+                
+                .button {display: inline-flex; font-size: 20pt;}
+                
+                .button.active {background-color: green;}
+                
+                .smallmenu {outline: 1pt solid black; padding: 2pt 5pt 2pt 5pt; margin: 7pt 0 0 0;}
+                
+                .menu {padding: 7pt;}
+                
+                .exitlightbox {background-color: dodgerblue; padding: 20pt;}
+                
+                
+                
+            </style>
+            
+            <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+            <script>
+            $(document).ready(function() {
+                
+                $(document).keyup(function(e) {
+                    if (e.keyCode == 27) { 
+                        window.alert("you can't escape");
+                        $('*').addClass('nightmode');
+                        $('.smallmenu').text('👁');
+                        $('.resetbutton').text('resist');
+                        
+                        //$( "span" ).clone().appendTo( "span" );
+                    }
+                });
+                
+                $( ".huge" ).clone().appendTo( "body" );
+                
+                $('span').prepend('Questions to discuss: ');
+                
+                $('.resetbutton').click(function() {
+                    $('.button').removeClass('active');
+                    $('.outer').removeClass('naughtydisplay nicedisplay kikdisplay revengedisplay wowdisplay strategicdisplay questiondisplay saddisplay');
+                });
+                
+                $('.smallfontbutton').click(function() {
+                    $('.smallfontbutton').toggleClass('active');
+                    $('p').toggleClass('smallfont');
+                });
+                
+                $('.naughtybutton').click(function() {
+                    $('.naughtybutton').toggleClass('active');
+                    $('.naughty').toggleClass('naughtydisplay');
+                });
+                
+                $('.nicebutton').click(function() {
+                    $('.nicebutton').toggleClass('active');
+                    $('.nice').toggleClass('nicedisplay');
+                });
+                
+                $('.kikbutton').click(function() {
+                    $('.kikbutton').toggleClass('active');
+                    $('.kik').toggleClass('kikdisplay');
+                });
+                
+                $('.revengebutton').click(function() {
+                    $('.revengebutton').toggleClass('active');
+                    $('.revenge').toggleClass('revengedisplay');
+                });
+                
+                $('.wowbutton').click(function() {
+                    $('.wowbutton').toggleClass('active');
+                    $('.wow').toggleClass('wowdisplay');
+                });
+                
+                $('.strategicbutton').click(function() {
+                    $('.strategicbutton').toggleClass('active');
+                    $('.strategic').toggleClass('strategicdisplay');
+                });
+                
+                $('.questionbutton').click(function() {
+                    $('.questionbutton').toggleClass('active');
+                    $('.question').toggleClass('questiondisplay');
+                });
+                
+                $('.sadbutton').click(function() {
+                    $('.sadbutton').toggleClass('active');
+                    $('.sad').toggleClass('saddisplay');
+                });
+                
+                $('.exitlightbox').hide();
+                
+                $('.outer > div').click(function() {
+                    $('.outer > div').hide();
+                    $(this).show().addClass('lightboxactive');
+                    $('.huge').addClass('lightboxactive');
+                    $('.exitlightbox').show();
+                    $('.smallmenu').hide();
+                });
+                
+                
+                $('.exitlightbox').click(function() {
+                    $('.outer > div').show().removeClass('lightboxactive');
+                    $('.huge').removeClass('lightboxactive');
+                    $(this).hide();
+                    $('.smallmenu').show();
+                });
+                
+            });
+            </script>
+            
+        </head>
+        <body>
+            
+            <!--<div class="intro">
+                <p>Connecting to server...</p>
+                <p>Connecting to server &nbsp;...</p>
+                <p>Looking for someone to chat with...</p>
+                <p>Looking for someone to chat with &nbsp; ...</p>
+            </div>!-->
+            
+            <div class="menu">
+                <div class="exitlightbox">Stop (Escape)</div>
+                <!--<div class="smallfontbutton smallmenu">change font size</div>!-->
+                <div class="resetbutton smallmenu">reset parameters</div>
+                <div class="naughtybutton button smallmenu">😜</div>
+                <div class="nicebutton button smallmenu">😊</div>
+                <div class="kikbutton button smallmenu">kik me 😍😉</div>
+                <div class="revengebutton button smallmenu">revenge xx 😈</div>
+                <div class="wowbutton button smallmenu">😮</div>
+                <div class="strategicbutton button smallmenu">...🤔</div>
+                <div class="questionbutton button smallmenu">❓</div>
+                <div class="sadbutton button smallmenu">😢</div>
+            </div>
+            
+            <div class="huge">
+                
+                
+                <div class="naughty kik outer"><div><p>Xkiq me staygoldforever98 boy18 hmu naughty chat Xkiq me staygoldforever98 boy18 hmu naughty chat </p><span>Xkiq me staygoldforever98 boy18 hmu naughty chat</span></div></div>
+                <div class="kik outer"><div><p>kiq: sarah_2609 i rate everything kiq: sarah_2609 i rate everything kiq: sarah_2609 i rate everything kiq: sarah_2609 i rate everything </p><span>kiq: sarah_2609 i rate everything</span></div></div>
+                <div class="naughty kik outer"><div><p>If you are bored, insecure, gullible or just horny kiq your boobs to 16hybrid😝, if you're none of the things listed kiq your ass to 16hybrid😝😂ps for the "men" im not sharing what i recieve If you are bored, insecure, gullible or just horny kiq your boobs to 16hybrid😝, if you're none of the things listed kiq your ass to 16hybrid😝😂ps for the "men" im not sharing what i recieve </p><span>If you are bored, insecure, gullible or just horny kiq your boobs to 16hybrid😝, if you're none of the things listed kiq your ass to 16hybrid😝😂ps for the "men" im not sharing what i recieve</span></div></div>
+                <div class="nice outer"><div><p>Hey there, just a reminder to please be safe in your conversations on here. Have a nice day. Hey there, just a reminder to please be safe in your conversations on here. Have a nice day. </p><span>Hey there, just a reminder to please be safe in your conversations on here. Have a nice day.</span></div></div>
+                <div class="outer"><div><p>Check out the new Omegle without any bots: typeaway DOT n e t Check out the new Omegle without any bots: typeaway DOT n e t </p><span>Check out the new Omegle without any bots: typeaway DOT n e t</span></div></div>
+                <div class="kik outer"><div><p>Blonde, blue eyed fem. I love white boys. Kiq: faraoPharaoh x Blonde, blue eyed fem. I love white boys. Kiq: faraoPharaoh x </p><span>Blonde, blue eyed fem. I love white boys. Kiq: faraoPharaoh x</span></div></div>
+                <div class="naughty kik outer"><div><p>May I rate your tits? Kiq hitmeupordont May I rate your tits? Kiq hitmeupordont </p><span>May I rate your tits? Kiq hitmeupordont</span></div></div>
+                <div class="naughty kik outer"><div><p>Want to rate my hard dick? K or snap sexguru(6) without (). F only Want to rate my hard dick? K or snap sexguru(6) without (). F only </p><span>Want to rate my hard dick? K or snap sexguru(6) without (). F only</span></div></div>
+                <div class="nice outer"><div><p>I'm being honest here, I'd like to see some tits, I don't care if they are big or small heck who am I to judge? if you would be so kind to send your bare chest kiq alepedrillo sc zarkuda I'm being honest here, I'd like to see some tits, I don't care if they are big or small heck who am I to judge? if you would be so kind to send your bare chest kiq alepedrillo sc zarkuda </p><span>I'm being honest here, I'd like to see some tits, I don't care if they are big or small heck who am I to judge? if you would be so kind to send your bare chest kiq alepedrillo sc zarkuda</span></div></div>
+                <div class="naughty revenge outer"><div><p>Teacher_pet is a slut. Send her your best nudes! Teacher_pet is a slut. Send her your best nudes! </p><span>Teacher_pet is a slut. Send her your best nudes!</span></div></div>
+                <div class="naughty outer"><div><p>Help me choke my chicken? Help me choke my chicken? Help me choke my chicken? Help me choke my chicken? </p><span>Help me choke my chicken?</span></div></div>
+                <div class="kik revenge outer"><div><p>spam the ugly bitch 😂 happygeekylucky in kiq spam the ugly bitch 😂 happygeekylucky in kiq </p><span>spam the ugly bitch 😂 happygeekylucky in kiq</span></div></div>
+                <div class="naughty kik outer"><div><p>Want to see an older man's cock? Kiq bobwerty Want to see an older man's cock? Kiq bobwerty </p><span>Want to see an older man's cock? Kiq bobwerty</span></div></div>
+                <div class="kik outer"><div><p>Looking for a 17-18 boy talking companion kiq mary jan17 helps if you're cute Looking for a 17-18 boy talking companion kiq mary jan17 helps if you're cute </p><span>Looking for a 17-18 boy talking companion kiq mary jan17 helps if you're cute</span></div></div>
+                <div class="naughty outer"><div><p>Freshboy21T - on both green and yellow apps if you want to see a 21 y/o white cock (i need proof you're a girl, sorry boys) Freshboy21T - on both green and yellow apps if you want to see a 21 y/o white cock (i need proof you're a girl, sorry boys) </p><span>Freshboy21T - on both green and yellow apps if you want to see a 21 y/o white cock (i need proof you're a girl, sorry boys)</span></div></div>
+                <div class="naughty kik outer"><div><p>xkiq me staygoldforever98 boy18 NAUGHTYY chat hmu xkiq me staygoldforever98 boy18 NAUGHTYY chat hmu </p><span>xkiq me staygoldforever98 boy18 NAUGHTYY chat hmu</span></div></div>
+                <div class="naughty kik outer"><div><p>Female selling nudes. Kiq: s_hxx Female selling nudes. Kiq: s_hxx Female selling nudes. Kiq: s_hxx Female selling nudes. Kiq: s_hxx </p><span>Female selling nudes. Kiq: s_hxx</span></div></div>
+                <div class="kik strategic outer"><div><p>Hello Girl! bored,curious or just wanna have fun trying Palm reading or fortune telling?skeptical and wanna know your fortune?kiq me paulthoms Hello Girl! bored,curious or just wanna have fun trying Palm reading or fortune telling?skeptical and wanna know your fortune?kiq me paulthoms </p><span>Hello Girl! bored,curious or just wanna have fun trying Palm reading or fortune telling?skeptical and wanna know your fortune?kiq me paulthoms</span></div></div>
+                <div class="naughty kik outer"><div><p>Any girl here who likes big breasts? kiq jasomiles Any girl here who likes big breasts? kiq jasomiles </p><span>Any girl here who likes big breasts? kiq jasomiles</span></div></div>
+                <div class="naughty revenge kik outer"><div><p>Show me your body to see my exs tits :D kxx: adamskiiis1 Show me your body to see my exs tits :D kxx: adamskiiis1 </p><span>Show me your body to see my exs tits :D kxx: adamskiiis1</span></div></div>
+                <div class="naughty revenge kik outer"><div><p>Kiq jaayjayy7111 if you want to Cum Tribute and see My turkish moms huge tits Kiq jaayjayy7111 if you want to Cum Tribute and see My turkish moms huge tits </p><span>Kiq jaayjayy7111 if you want to Cum Tribute and see My turkish moms huge tits</span></div></div>
+                <div class="revenge wow outer"><div><p>Kill all Jews and niggers. Kill all Jews and niggers. Kill all Jews and niggers. Kill all Jews and niggers. </p><span>Kill all Jews and niggers.</span></div></div>
+                <div class="strategic kik outer"><div><p>Decent Job (3250 US dollars every month), no sexual, no nudity for female candidate.If you are intelligent, confident, proactive..kiq at rinkucruzer Decent Job (3250 US dollars every month), no sexual, no nudity for female candidate.If you are intelligent, confident, proactive..kiq at rinkucruzer </p><span>Decent Job (3250 US dollars every month), no sexual, no nudity for female candidate.If you are intelligent, confident, proactive..kiq at rinkucruzer</span></div></div>
+                <div class="naughty kik outer"><div><p>Selling my nudes | kiq kellywolf2 Selling my nudes | kiq kellywolf2 Selling my nudes | kiq kellywolf2 Selling my nudes | kiq kellywolf2 </p><span>Selling my nudes | kiq kellywolf2</span></div></div>
+                <div class="kik outer"><div><p>Any girls wanna chat? General chat, Ask Me Anything or whatever, hmu on kiq. OllieN.94 or SC OllieN94 :) x Any girls wanna chat? General chat, Ask Me Anything or whatever, hmu on kiq. OllieN.94 or SC OllieN94 :) x  </p><span>Any girls wanna chat? General chat, Ask Me Anything or whatever, hmu on kiq. OllieN.94 or SC OllieN94 :) x</span></div></div>
+                <div class="kik outer"><div><p>Hey wanna chat with a 24 Aussie guy? I'm bored with nothing to do. My name for both Sqype and kiq is reeceooto Hey wanna chat with a 24 Aussie guy? I'm bored with nothing to do. My name for both Sqype and kiq is reeceooto </p><span>Hey wanna chat with a 24 Aussie guy? I'm bored with nothing to do. My name for both Sqype and kiq is reeceooto</span></div></div>
+                <div class="kik strategic outer"><div><p>Girls of all ages message boo.ker on kiq, I have a question Girls of all ages message boo.ker on kiq, I have a question </p><span>Girls of all ages message boo.ker on kiq, I have a question</span></div></div>
+                <div class="naughty kik outer"><div><p>Hey bitch wanna see my dick show me ur boobs kiq uffan.tariq Hey bitch wanna see my dick show me ur boobs kiq uffan.tariq </p><span>Hey bitch wanna see my dick show me ur boobs kiq uffan.tariq</span></div></div>
+                <div class="kik outer"><div><p>join #youcantsitwithus come make it lit join #youcantsitwithus come make it lit </p><span>join #youcantsitwithus come make it lit</span></div></div>
+                <div class="naughty kik outer"><div><p>Any ladies that want to see my huge cock. Hmu on kiq: jakefeeley Any ladies that want to see my huge cock. Hmu on kiq: jakefeeley </p><span>Any ladies that want to see my huge cock. Hmu on kiq: jakefeeley</span></div></div>
+                <div class="kik outer"><div><p>ⱪįⱪ me timr387 and I'll rate you. Male or female I don't care. ⱪįⱪ me timr387 and I'll rate you. Male or female I don't care. </p><span>ⱪįⱪ me timr387 and I'll rate you. Male or female I don't care.</span></div></div>
+                <div class="naughty kik outer"><div><p>Want to rate my 9inch dick? M or F are welxome! Xik me --> m.k.power Want to rate my 9inch dick? M or F are welxome! Xik me --> m.k.power </p><span>Want to rate my 9inch dick? M or F are welxome! Xik me --> m.k.power</span></div></div>
+                <div class="question outer"><div><p>Ever had feelings for a same sex friend? Ever had feelings for a same sex friend? </p><span>Ever had feelings for a same sex friend?</span></div></div>
+                <div class="naughty kik outer"><div><p>are you that girl who wants , no needs to be the toy for a master ...xk-i-kx.. me ....dom_sir_master are you that girl who wants , no needs to be the toy for a master ...xk-i-kx.. me ....dom_sir_master </p><span>are you that girl who wants , no needs to be the toy for a master ...xk-i-kx.. me ....dom_sir_master</span></div></div>
+                <div class="naughty kik outer"><div><p>Any girl want to show me your fert please? Kiq Paul.955 (with the dot) Any girl want to show me your fert please? Kiq Paul.955 (with the dot) </p><span>Any girl want to show me your fert please? Kiq Paul.955 (with the dot)</span></div></div>
+                <div class="strategic kik outer"><div><p>Hey, drop me a message if you're a skinny girl, got some questions for you: ILoveIt187 (kiq) Hey, drop me a message if you're a skinny girl, got some questions for you: ILoveIt187 (kiq) </p><span>Hey, drop me a message if you're a skinny girl, got some questions for you: ILoveIt187 (kiq)</span></div></div>
+                <div class="strategic outer"><div><p>If there's any South Bombay people here, they can type SouthB on interests. Thank you. If there's any South Bombay people here, they can type SouthB on interests. Thank you. </p><span>If there's any South Bombay people here, they can type SouthB on interests. Thank you.</span></div></div>
+                <div class="kik strategic outer"><div><p>Hi, rating here at klz raul00781..mostly I am bored and good with accurate rates .. the highest rate might just get an incentive of a 5-10$ bill or a gift card ..if not isn't boredom enough a reason Hi, rating here at klz raul00781..mostly I am bored and good with accurate rates .. the highest rate might just get an incentive of a 5-10$ bill or a gift card ..if not isn't boredom enough a reason </p><span>Hi, rating here at klz raul00781..mostly I am bored and good with accurate rates .. the highest rate might just get an incentive of a 5-10$ bill or a gift card ..if not isn't boredom enough a reason</span></div></div>
+                <div class="kik outer"><div><p>#isthatachicken kiq group. Hot af people. #isthatachicken kiq group. Hot af people. </p><span>#isthatachicken kiq group. Hot af people.</span></div></div>
+                <div class="naughty question outer"><div><p>Can i watch ur sex chat? Can i watch ur sex chat? Can i watch ur sex chat? Can i watch ur sex chat? </p><span>Can i watch ur sex chat?</span></div></div>
+                <div class="naughty kik revenge outer"><div><p>Show me your body to see my exs tits :D kxx: adamskiiis1 Show me your body to see my exs tits :D kxx: adamskiiis1 </p><span>Show me your body to see my exs tits :D kxx: adamskiiis1</span></div></div>
+                <div class="question outer"><div><p>Why does socialism work so well? Why does socialism work so well? </p><span>Why does socialism work so well?</span></div></div>
+                <div class="naughty outer"><div><p>Hey pakistani male here. You want my warm loving dick? Hey pakistani male here. You want my warm loving dick? </p><span>Hey pakistani male here. You want my warm loving dick?</span></div></div>
+                <div class="naughty question outer"><div><p>do you enjoy pegging? do you enjoy pegging? do you enjoy pegging? do you enjoy pegging? </p><span>do you enjoy pegging?</span></div></div>
+                <div class="strategic kik outer"><div><p>Rating or Roasting? Your choice. Tears of laughter or tears of self loathing, its up to you, don't get too salty. Clothed or otherwise. Hmu on kiq Iamtheroastman Rating or Roasting? Your choice. Tears of laughter or tears of self loathing, its up to you, don't get too salty. Clothed or otherwise. Hmu on kiq Iamtheroastman </p><span>Rating or Roasting? Your choice. Tears of laughter or tears of self loathing, its up to you, don't get too salty. Clothed or otherwise. Hmu on kiq Iamtheroastman</span></div></div>
+                <div class="naughty question outer"><div><p>Anal....yes or no Anal....yes or no Anal....yes or no Anal....yes or no Anal....yes or no Anal....yes or no Anal....yes or no Anal....yes or no </p><span>Anal....yes or no</span></div></div>
+                <div class="wow outer"><div><p>Sorry I gotta say it boys Elon Musk sounds like somebody's fursona Sorry I gotta say it boys Elon Musk sounds like somebody's fursona </p><span>Sorry I gotta say it boys Elon Musk sounds like somebody's fursona</span></div></div>
+                <div class="naughty wow outer"><div><p>I will rape you with my dick. I will rape you with my dick. I will rape you with my dick. I will rape you with my dick. </p><span>I will rape you with my dick.</span></div></div>
+                <div class="strategic kik outer"><div><p>Girls, want some stranger to rate something for you? Kiq nonamedman123 clothed or not doesn't matter. I'll rate when I wake up Girls, want some stranger to rate something for you? Kiq nonamedman123 clothed or not doesn't matter. I'll rate when I wake up </p><span>Girls, want some stranger to rate something for you? Kiq nonamedman123 clothed or not doesn't matter. I'll rate when I wake up</span></div></div>
+                <div class="question sad outer"><div><p>why do they always disconnect when I say hi my name is peter why do they always disconnect when I say hi my name is peter </p><span>why do they always disconnect when I say hi my name is peter</span></div></div>
+                <div class="nice wow outer"><div><p>Once upon a time, old George found a cute underage girl on the Intemet. He said he's a boy and posted pics of a little boy. The little girl posted him her pics. The two old men fell in love. The end. Once upon a time, old George found a cute underage girl on the Intemet. He said he's a boy and posted pics of a little boy. The little girl posted him her pics. The two old men fell in love. The end. </p><span>Once upon a time, old George found a cute underage girl on the Intemet. He said he's a boy and posted pics of a little boy. The little girl posted him her pics. The two old men fell in love. The end.</span></div></div>
+                <div class="naughty question outer"><div><p>what are girls on here for if they dont wanna get dicked down what are girls on here for if they dont wanna get dicked down </p><span>>what are girls on here for if they dont wanna get dicked down</span></div></div>
+                <div class="kik revenge outer"><div><p>Anyone want to exact revenge on your ex? Kiq cuntsaregreat Anyone want to exact revenge on your ex? Kiq cuntsaregreat </p><span>Anyone want to exact revenge on your ex? Kiq cuntsaregreat</span></div></div>
+                <div class="wow outer"><div><p>Fenton or Adam or whatever your damn name is. I don't really give a fuck. All I need to know right now is you're a murderin' son of a bitch. Fenton or Adam or whatever your damn name is. I don't really give a fuck. All I need to know right now is you're a murderin' son of a bitch. </p><span>Fenton or Adam or whatever your damn name is. I don't really give a fuck. All I need to know right now is you're a murderin' son of a bitch.</span></div></div>
+                <div class="naughty outer"><div><p>Bored, rating everything and anything. Timmyjames.99 (no.) Bored, rating everything and anything. Timmyjames.99 (no.) </p><span>Bored, rating everything and anything. Timmyjames.99 (no.)</span></div></div>
+                <div class="wow outer"><div><p>when you can easily lift 200 kilos but struggle to do 10 push ups when you can easily lift 200 kilos but struggle to do 10 push ups </p><span>when you can easily lift 200 kilos but struggle to do 10 push ups</span></div></div>
+                <div class="question wow outer"><div><p>What the fuck is a sonic? What the fuck is a sonic? What the fuck is a sonic? What the fuck is a sonic? </p><span>What the fuck is a sonic?</span></div></div>
+                <div class="question nice outer"><div><p>What was the last band/musician you listened to? What was the last band/musician you listened to? </p><span>What was the last band/musician you listened to?</span></div></div>
+                <div class="naughty wow question outer"><div><p>how ya pussy taste? how ya pussy taste? how ya pussy taste? how ya pussy taste? </p><span>how ya pussy taste?</span></div></div>
+                <div class="naughty question outer"><div><p>How often do u jerk off? How often do u jerk off? How often do u jerk off? How often do u jerk off? </p><span>How often do u jerk off?</span></div></div>
+                <div class="naughty revenge kik outer"><div><p>ashleyy1833link this s***, the bitch loves to treated like a bitch message her up and tell her that her daddy told you to message.. also call her a bitch and send a pic of ur cock and tell her to suck ashleyy1833link this s***, the bitch loves to treated like a bitch message her up and tell her that her daddy told you to message.. also call her a bitch and send a pic of ur cock and tell her to suck </p><span>ashleyy1833link this s***, the bitch loves to treated like a bitch message her up and tell her that her daddy told you to message.. also call her a bitch and send a pic of ur cock and tell her to suck</span></div></div>
+                <div class="naughty kik outer"><div><p>Kiq greatestsummerever nineteen F Selling pics, vids and sexting. Or you can keep talking to other guys on here. If that's what you want. Kiq greatestsummerever nineteen F Selling pics, vids and sexting. Or you can keep talking to other guys on here. If that's what you want. </p><span>Kiq greatestsummerever nineteen F Selling pics, vids and sexting. Or you can keep talking to other guys on here. If that's what you want.</span></div></div>
+                <div class="naughty outer"><div><p>Anyone wanna wank on S4ype Anyone wanna wank on S4ype Anyone wanna wank on S4ype Anyone wanna wank on S4ype </p><span>Anyone wanna wank on S4ype</span></div></div>
+                <div class="naughty question outer"><div><p>Wildest RP you have done? Wildest RP you have done? Wildest RP you have done? Wildest RP you have done? </p><span>Wildest RP you have done?</span></div></div>
+                <div class="naughty wow outer"><div><p>YOU SHOULD KILL BRO WOOO YOU GOT ONE WEEK OF FREEDOM LEFT WOOO YOU SHOULD KILL BRO WOOO YOU GOT ONE WEEK OF FREEDOM LEFT WOOO </p><span>YOU SHOULD KILL BRO WOOO YOU GOT ONE WEEK OF FREEDOM LEFT WOOO</span></div></div>
+                <div class="strategic kik outer"><div><p>Girls, wanna chat? Clean or dirty, I don't mind. Just lemme know which! Kiq or $napchat me - jack19_x Girls, wanna chat? Clean or dirty, I don't mind. Just lemme know which! Kiq or $napchat me - jack19_x </p><span>Girls, wanna chat? Clean or dirty, I don't mind. Just lemme know which! Kiq or $napchat me - jack19_x</span></div></div>
+                <div class="naughty kik outer"><div><p>Women 18+ only - kiq me - imherejust4fun Women 18+ only - kiq me - imherejust4fun </p><span>Women 18+ only - kiq me - imherejust4fun</span></div></div>
+                <div class="naughty kik outer"><div><p>Would anyone like to see my small penis leave your kiq Would anyone like to see my small penis leave your kiq </p><span>Would anyone like to see my small penis leave your kiq</span></div></div>
+                <div class="naughty question outer"><div><p>Why do girls seem to like really long penises? Why do girls seem to like really long penises? </p><span>Why do girls seem to like really long penises?</span></div></div>
+                <div class="naughty kik outer"><div><p>Any girls, mum's, milfs, bored housewives etc. want to see my thick cock? Kiq marc 1393 Any girls, mum's, milfs, bored housewives etc. want to see my thick cock? Kiq marc 1393 </p><span>Any girls, mum's, milfs, bored housewives etc. want to see my thick cock? Kiq marc 1393</span></div></div>
+                <div class="naughty question outer"><div><p>Is sexting good? Is sexting good? Is sexting good? Is sexting good? </p><span>Is sexting good?</span></div></div>
+                <div class="naughty kik outer"><div><p>Hey I'm rating cocks on kiq at str8phobic Hey I'm rating cocks on kiq at str8phobic </p><span>Hey I'm rating cocks on kiq at str8phobic</span></div></div>
+                <div class="naughty kik strategic question outer"><div><p>do you like walking around your house naked ?Racha321 to talk about it do you like walking around your house naked ?Racha321 to talk about it </p><span>do you like walking around your house naked ?Racha321 to talk about it</span></div></div>
+                <div class="question wow outer"><div><p>What is a panic attack like? What is a panic attack like? What is a panic attack like? What is a panic attack like? </p><span>What is a panic attack like?</span></div></div>
+                <div class="wow outer"><div><p>I can feel the diarrhea slipping out of my butt. 😃💩🖕 I can feel the diarrhea slipping out of my butt. 😃💩🖕🏼 </p><span>I can feel the diarrhea slipping out of my butt. 😃💩🖕</span></div></div>
+                <div class="question sad outer"><div><p>I want to rape kids, is that bad I want to rape kids, is that bad I want to rape kids, is that bad I want to rape kids, is that bad </p><span>I want to rape kids, is that bad</span></div></div>
+                <div class="kik strategic outer"><div><p>Hey girl... Kiq SucreOcon Hey girl... Kiq SucreOcon Hey girl... Kiq SucreOcon Hey girl... Kiq SucreOcon </p><span>Hey girl... Kiq SucreOcon</span></div></div>
+                <div class="question wow outer"><div><p>Why do game developers keep thinking Loot boxes are a good idea? It's gambling Why do game developers keep thinking Loot boxes are a good idea? It's gambling </p><span>Why do game developers keep thinking Loot boxes are a good idea? It's gambling</span></div></div>
+                <div class="naughty question outer"><div><p>What is your favorite position? What is your favorite position? </p><span>What is your favorite position?</span></div></div>
+                <div class="naughty kik outer"><div><p>Im bored 15 fe don't hit me up if u don't show face my kiq : alex_v7777 Im bored 15 fe don't hit me up if u don't show face my kiq : alex_v7777 </p><span>Im bored 15 fe don't hit me up if u don't show face my kiq : alex_v7777</span></div></div>
+                <div class="naughty kik outer"><div><p>I'm selling nudes. K.me at kathyisfabulous I'm selling nudes. K.me at kathyisfabulous </p><span>I'm selling nudes. K.me at kathyisfabulous</span></div></div>
+                <div class="wow outer"><div><p>Pajeet gets called out Pajeet gets called out Pajeet gets called out Pajeet gets called out </p><span>Pajeet gets called out</span></div></div>
+                <div class="naughty wow sad outer"><div><p>if REYNASAKALOKO wuld gimme pic of her big tits n unblck me ill sto psting here i asked her nicely now she blocked n ignored me?? Jst 1 pic dnt be a btch!!? if REYNASAKALOKO wuld gimme pic of her big tits n unblck me ill sto psting here i asked her nicely now she blocked n ignored me?? Jst 1 pic dnt be a btch!!? </p><span>if REYNASAKALOKO wuld gimme pic of her big tits n unblck me ill sto psting here i asked her nicely now she blocked n ignored me?? Jst 1 pic dnt be a btch!!?</span></div></div>
+                <div class="nice wow outer"><div><p>I think girls should prevent their horemones from ruining their body when they are about 10 so that they can stay small and cute. I think girls should prevent their horemones from ruining their body when they are about 10 so that they can stay small and cute. </p><span>I think girls should prevent their horemones from ruining their body when they are about 10 so that they can stay small and cute.</span></div></div>
+                <div class="kik outer"><div><p>Roast me: K- strayamate___ Roast me: K- strayamate___ Roast me: K- strayamate___ Roast me: K- strayamate___ </p><span>Roast me: K- strayamate___</span></div></div>
+                <div class="kik outer nice"><div><p>Kiq coopercasper9 if you wanna talk ;)) Kiq coopercasper9 if you wanna talk ;)) </p><span>Kiq coopercasper9 if you wanna talk ;))</span></div></div>
+                <div class="wow outer"><div><p>There are only two genders. Trannies don't exist - they're just mentally and morally depraved. Agree or disagree? There are only two genders. Trannies don't exist - they're just mentally and morally depraved. Agree or disagree? </p><span>There are only two genders. Trannies don't exist - they're just mentally and morally depraved. Agree or disagree?</span></div></div>
+                <div class="question outer"><div><p>Why don't people use Chatroulette anymore? Why don't people use Chatroulette anymore? </p><span>Why don't people use Chatroulette anymore?</span></div></div>
+                <div class="wow outer"><div><p>DUMBASSES ARE STUPID. DUMBASSES ARE STUPID. DUMBASSES ARE STUPID. DUMBASSES ARE STUPID. </p><span>DUMBASSES ARE STUPID.</span></div></div>
+                <div class="outer"><div><p>Rating male or female snap dyldog_01 Rating male or female snap dyldog_01 </p><span>Rating male or female snap dyldog_01</span></div></div>
+                <div class="sad wow outer"><div><p>pedos get the best girls. pedos get the best girls. pedos get the best girls. pedos get the best girls. </p><span>pedos get the best girls.</span></div></div>
+                <div class="kik outer"><div><p>I'll rate your style. Send an ootd to *pink*_*sunshine*96* without the stars. I'll rate your style. Send an ootd to *pink*_*sunshine*96* without the stars. </p><span>I'll rate your style. Send an ootd to *pink*_*sunshine*96* without the stars.</span></div></div>
+                <div class="naughty outer"><div><p>Age, Sex, Location, Bra size? Age, Sex, Location, Bra size? Age, Sex, Location, Bra size? Age, Sex, Location, Bra size? </p><span>Age, Sex, Location, Bra size?</span></div></div>
+                <div class="sad wow outer"><div><p>say what you want about pedos. theyre perverted or creepy or whatever. but you can't deny, they do get the best girls. say what you want about pedos. theyre perverted or creepy or whatever. but you can't deny, they do get the best girls. </p><span>say what you want about pedos. theyre perverted or creepy or whatever. but you can't deny, they do get the best girls.</span></div></div>
+                <div class="sad naughty strategic outer"><div><p>Why are my boobs really tiny at 19? Add imastalker07 sc. I need friends Why are my boobs really tiny at 19? Add imastalker07 sc. I need friends </p><span>Why are my boobs really tiny at 19? Add imastalker07 sc. I need friends</span></div></div>
+                <div class="strategic outer"><div><p>Dare : Tell Me your Ex Number Dare : Tell Me your Ex Number Dare : Tell Me your Ex Number Dare : Tell Me your Ex Number </p><span>Dare : Tell Me your Ex Number</span></div></div>
+                <div class="sad wow outer"><div><p>She saw both their lives flash before their eyes, she didn't even have time to cry, she was so scared, she threw her hands up in the air, Jesus take the wheel, take it from my hands, She saw both their lives flash before their eyes, she didn't even have time to cry, she was so scared, she threw her hands up in the air, Jesus take the wheel, take it from my hands, </p><span>She saw both their lives flash before their eyes, she didn't even have time to cry, she was so scared, she threw her hands up in the air, Jesus take the wheel, take it from my hands,</span></div></div>
+                <div class="wow outer"><div><p>lul of kut lul of kut lul of kut lul of kut lul of kut lul of kut lul of kut lul of kut </p><span>lul of kut</span></div></div>
+                <div class="naughty kik outer"><div><p>Want to see an older man's cock? Kiq bobwerty Want to see an older man's cock? Kiq bobwerty </p><span>Want to see an older man's cock? Kiq bobwerty</span></div></div>
+                <div class="wow sad outer"><div><p>Jesus take the wheel, take it from my hands, because I cant do this on my own, I gonna let it go, so give me one more chance, save me from this road I am on, Jesus take the wheel Jesus take the wheel, take it from my hands, because I cant do this on my own, I gonna let it go, so give me one more chance, save me from this road I am on, Jesus take the wheel </p><span>Jesus take the wheel, take it from my hands, because I cant do this on my own, I gonna let it go, so give me one more chance, save me from this road I am on, Jesus take the wheel</span></div></div>
+                <div class="naughty question outer"><div><p>Would you flirt with a random stranger? Would you flirt with a random stranger? </p><span>Would you flirt with a random stranger?</span></div></div>
+                <div class="naughty question outer"><div><p>turns on and turn offs? turns on and turn offs? turns on and turn offs? turns on and turn offs? </p><span>turns on and turn offs?</span></div></div>
+                <div class="kik outer"><div><p>hi m like to rate u. k.i.q or ur sis. wife. daughter. mother. gf. or any girl u wish a ratin. love87878787 all ages welcome rate honestly hi m like to rate u. k.i.q or ur sis. wife. daughter. mother. gf. or any girl u wish a ratin. love87878787 all ages welcome rate honestly </p><span>hi m like to rate u. k.i.q or ur sis. wife. daughter. mother. gf. or any girl u wish a ratin. love87878787 all ages welcome rate honestly</span></div></div>
+                <div class="wow outer"><div><p>I hate anime, let's ban it I hate anime, let's ban it I hate anime, let's ban it I hate anime, let's ban it </p><span>I hate anime, let's ban it</span></div></div>
+                <div class="wow questions outer"><div><p>What do you think about eugenics? What do you think about eugenics? </p><span>What do you think about eugenics?</span></div></div>
+                <div class="naughty outer"><div><p>I got a big Dickle I got a big Dickle I got a big Dickle I got a big Dickle </p><span>I got a big Dickle</span></div></div>
+                <div class="question wow outer"><div><p>Do you find life stressful? How do you cope? Do you find life stressful? How do you cope? </p><span>Do you find life stressful? How do you cope?</span></div></div>
+                <div class="nice wow kik outer"><div><p>Kiw lordbigboy 42 pics of your sisters please thanks for your cooperation Kiw lordbigboy 42 pics of your sisters please thanks for your cooperation </p><span>Kiw lordbigboy 42 pics of your sisters please thanks for your cooperation</span></div></div>
+                <div class="naughty question outer"><div><p>Have you ever let a Nigger suck your Dick ? Have you ever let a Nigger suck your Dick ? </p><span>Have you ever let a Nigger suck your Dick ?</span></div></div>
+                <div class="naughty strategic kik outer"><div><p>Guys, girls, animals, robots who have gained sentience. Doesn't matter. Rating everything. Kiq blueslippers Guys, girls, animals, robots who have gained sentience. Doesn't matter. Rating everything. Kiq blueslippers </p><span>Guys, girls, animals, robots who have gained sentience. Doesn't matter. Rating everything. Kiq blueslippers</span></div></div>
+                <div class="naughty wow outer"><div><p>I would fuck a 12 yea r old non sexually I would fuck a 12 yea r old non sexually </p><span>I would fuck a 12 yea r old non sexually</span></div></div>
+                <div class="naughty strategic kik outer"><div><p>Girls, who are into threesome or curious about it, lets chat. kiq Hexshare Girls, who are into threesome or curious about it, lets chat. kiq Hexshare </p><span>Girls, who are into threesome or curious about it, lets chat.</span></div></div>
+                <div class="naughty wow question outer"><div><p>does anyone else like little boy dicks, ive always wanted to suck one lol does anyone else like little boy dicks, ive always wanted to suck one lol </p><span>does anyone else like little boy dicks, ive always wanted to suck one lol</span></div></div>
+                <div class="question wow outer"><div><p>How old are you? Do you watch any cartoon shows at all? If so, which ones? How old are you? Do you watch any cartoon shows at all? If so, which ones? </p><span>How old are you? Do you watch any cartoon shows at all? If so, which ones?</span></div></div>
+                <div class="naughty question outer"><div><p>Are you a Playboy or Playgirl? Are you a Playboy or Playgirl? Are you a Playboy or Playgirl? Are you a Playboy or Playgirl? </p><span>Are you a Playboy or Playgirl?</span></div></div>
+                <div class="wow question outer"><div><p>what would u do if jews banned u from the internets like they did with Andrew Anglin? what would u do if jews banned u from the internets like they did with Andrew Anglin? </p><span>what would u do if jews banned u from the internets like they did with Andrew Anglin?</span></div></div>
+                <div class="wow question outer"><div><p>why the half women/girls do not care her feet? why the half women/girls do not care her feet? </p><span>why the half women/girls do not care her feet?</span></div></div>
+            </div>
+        </body>
+    </html>
