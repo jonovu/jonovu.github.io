@@ -10,6 +10,13 @@
                 
                 body {background-color: black;}
                 
+                .bg {animation: bg 6s infinite alternate ease-in-out; height: 100%; width: 100%; position: fixed; top: 0; opacity: 0.4;}
+                
+                @keyframes bg {
+                    from {background-color: #261711;}
+                    to {background-color: #003958;}
+                }
+                
                 p {
                     margin-left: 30pt;
                     /*-webkit-filter: url('#goo');*/
@@ -23,7 +30,7 @@
                     font-family: "capitolium-2";
                     font-weight: 300;
                     line-height: 52pt;
-                    color: #999999;
+                    color: #2a1813;
                     letter-spacing: 0.1pt;
                     
                 }
@@ -36,9 +43,10 @@
                 
                 
                 @keyframes fade {
-                    0% {opacity:0; color: white;}
-                    20% {color: white; opacity: 1;}
-                    100% {opacity:1;}
+                    0% {opacity:0; color: #6d9da4; filter: blur(2px) contrast(10) brightness(0);}
+                    20% {color: #a9d3b6; opacity: 1; filter: blur(1px) contrast(1) brightness(1);}
+                    30% {color: #8ba099;}
+                    100% {opacity:1; filter: blur(0.4px) contrast(1) brightness(1.1);}
                 }
                 
                 @keyframes fadesub {
@@ -71,40 +79,104 @@
                 #rain {animation-delay: 22.6s}
                 #period {animation-delay: 23.8s}
                 
-                .dot {animation: fadediv 12s forwards; height: 20px; width: 20px; position: fixed; border-radius: 20px;}
+                .dot {background-color: white; opacity: 0; animation: fadediv 12s infinite; height: 20px; width: 20px; position: fixed; border-radius: 20px;}
                 
                 @keyframes fadediv {
-                    0% {opacity:0; background-color: white;}
-                    20% {background-color: white; opacity: 1;}
-                    100% {opacity:1; background-color: transparent;}
+                    0% {opacity:0;  filter: blur(20px) contrast(1.1) brightness(20);}
+                    20% {opacity: 0.4; filter: blur(0.4px) contrast(1) brightness(1);}
+                    100% {opacity:0; }
                 }
                 
-                /*#d1 {animation-delay: 9.2s; top: 71%; left: 14%;}
-                #d2 {animation-delay: 11s; top: 57%; left: 53%;}*/
-                #d3 {animation-delay: 12.5s; top: 36%; left: 40%;}
-                #d4 {animation-delay: 14.5s; top: 43%; left: 77%;}
-                #d5 {animation-delay: 15.7s; top: 35%; left: 89%;}
-                #d6 {animation-delay: 17.2s; top: 30%; left: 48%;}
-                #d7 {animation-delay: 19.3s; top: 12%; left: 30%;}
-                /*#d8 {animation-delay: 21s; top: 22%; left: 27%;}
-                #d9 {animation-delay: 18s; top: 20%; left: 40%;}
-                #d10 {animation-delay: 20s; top: 22%; left: 58%;}
-                #d11 {animation-delay: 20.6s; top: 61%; left: 46%;}
-                #d12 {animation-delay: 21.7s; top: 11%; left: 71%;}
-                #d13 {animation-delay: 22.2s; top: 28%; left: 75%;}
-                #d14 {animation-delay: 23.4s; top: 31%; left: 47%;}*/
+                #d1 {animation-delay: 9.2s; }
+                #d2 {animation-delay: 11s; }
+                #d3 {animation-delay: 12.5s; }
+                #d4 {animation-delay: 14.5s; }
+                #d5 {animation-delay: 15.7s; }
+                #d6 {animation-delay: 17.2s; }
+                #d7 {animation-delay: 19.3s; }
+                #d8 {animation-delay: 21s; }
+                #d9 {animation-delay: 18s; }
+                #d10 {animation-delay: 20s; }
+                #d11 {animation-delay: 20.6s; }
+                #d12 {animation-delay: 21.7s; }
+                #d13 {animation-delay: 22.2s; }
+                #d14 {animation-delay: 23.4s; }
                 
+                .bgdivs { position: fixed; margin: 0; padding: 0;}
+                
+                .bgdiv {height:100vh; width: 0.2vw; display: inline-flex; margin-left:9vw; padding: 0; transform: translateY(-24pt); animation: fadebg 12s ease-in-out infinite alternate;}
+                
+                @keyframes fadebg {
+                    0% {background-color: transparent; filter: blur(20px) contrast(2);}
+                    3% {background-color: #6d9da4; }
+                    10% {background-color: #a9d3b6; filter: blur(5px) contrast(1.5);}
+                    70% {background-color: #125861;filter: blur(20px) contrast(2);}
+                }
+                
+                #bgdiv1 {opacity: 0.2; animation-delay: 8s;}
+                #bgdiv2 {opacity: 0.3; animation-delay: 8.2s;}
+                #bgdiv3 {opacity: 0.4; animation-delay: 8.4s;}
+                #bgdiv4 {opacity: 0.5; animation-delay: 8.6s;}
+                #bgdiv5 {opacity: 0.6; animation-delay: 8.8s;}
+                #bgdiv6 {opacity: 0.5; animation-delay: 9s;}
+                #bgdiv7 {opacity: 0.4; animation-delay: 9.2s;}
+                #bgdiv8 {opacity: 0.3; animation-delay: 9.4s;}
+                #bgdiv9 {opacity: 0.2; animation-delay: 9.6s;}
+                #bgdiv10 {opacity: 0.1; animation-delay: 9.8s;}
                 
                 
             </style>
             <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
             <script>
             $(document).ready(function() {
+                $('#d1').css('top', Math.random() * 90 + 5 + 'vh');
+                $('#d2').css('top', Math.random() * 90 + 5 + 'vh');
+                $('#d3').css('top', Math.random() * 90 + 5 + 'vh');
+                $('#d4').css('top', Math.random() * 90 + 5 + 'vh');
+                $('#d5').css('top', Math.random() * 90 + 5 + 'vh');
+                $('#d6').css('top', Math.random() * 90 + 5 + 'vh');
+                $('#d7').css('top', Math.random() * 90 + 5 + 'vh');
+                $('#d8').css('top', Math.random() * 90 + 5 + 'vh');
+                $('#d9').css('top', Math.random() * 90 + 5 + 'vh');
+                $('#d10').css('top', Math.random() * 90 + 5 + 'vh');
+                $('#d11').css('top', Math.random() * 90 + 5 + 'vh');
+                $('#d12').css('top', Math.random() * 90 + 5 + 'vh');
+                $('#d13').css('top', Math.random() * 90 + 5 + 'vh');
+                $('#d14').css('top', Math.random() * 90 + 5 + 'vh');
                 
-            });
+                $('#d1').css('left', Math.random() * 90 + 5 + 'vw');
+                $('#d2').css('left', Math.random() * 90 + 5 + 'vw');
+                $('#d3').css('left', Math.random() * 90 + 5 + 'vw');
+                $('#d4').css('left', Math.random() * 90 + 5 + 'vw');
+                $('#d5').css('left', Math.random() * 90 + 5 + 'vw');
+                $('#d6').css('left', Math.random() * 90 + 5 + 'vw');
+                $('#d7').css('left', Math.random() * 90 + 5 + 'vw');
+                $('#d8').css('left', Math.random() * 90 + 5 + 'vw');
+                $('#d9').css('left', Math.random() * 90 + 5 + 'vw');
+                $('#d10').css('left', Math.random() * 90 + 5 + 'vw');
+                $('#d11').css('left', Math.random() * 90 + 5 + 'vw');
+                $('#d12').css('left', Math.random() * 90 + 5 + 'vw');
+                $('#d13').css('left', Math.random() * 90 + 5 + 'vw');
+                $('#d14').css('left', Math.random() * 90 + 5 + 'vw');
+                });
             </script>
         </head>
         <body>
+            
+            <div class="bg"></div>
+            
+            <div class="bgdivs">
+                <div class="bgdiv" id="bgdiv1"></div>
+                <div class="bgdiv" id="bgdiv2"></div>
+                <div class="bgdiv" id="bgdiv3"></div>
+                <div class="bgdiv" id="bgdiv4"></div>
+                <div class="bgdiv" id="bgdiv5"></div>
+                <div class="bgdiv" id="bgdiv6"></div>
+                <div class="bgdiv" id="bgdiv7"></div>
+                <div class="bgdiv" id="bgdiv8"></div>
+                <div class="bgdiv" id="bgdiv9"></div>
+                <div class="bgdiv" id="bgdiv10"></div>
+            </div>
             
             <div class="dotswrapper">
                 <div class="dot" id="d1"></div>
@@ -133,15 +205,6 @@
             
             <p><span class="subtitle">&ndash; Rutger Hauer as Roy Batty in <i>Blade Runner</i></span></p>
             
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-              <defs>
-                <filter id="goo">
-                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 2 -2" result="goo" />
-                  <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-                </filter>
-              </defs>
-            </svg>
 
         </body>
 </html>
