@@ -195,11 +195,13 @@
                 });
                 
                 $('.tryintro').hover( function() {
-                    $('.spyintro').fadeIn()
+                    $('.spyintro').fadeIn();
                 });
                 
                 $('.tryintro').click( function() {
-                    $('.introcontent').fadeOut()
+                    $('.introcontent').fadeOut();
+                    $('.connectingintro').fadeIn().delay(2000).fadeOut(),
+                    $('.menu').delay(2400).fadeIn();
                 });
                 
                 
