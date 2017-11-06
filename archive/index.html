@@ -67,6 +67,32 @@
                 
                 
                 
+                
+                
+                
+                .intro {position: fixed; margin-top: 5vh; width: 70%; margin-left: 15%; z-index: 5;}
+                
+                .intro p {font-size: 20pt; font-family: chalkboard; text-transform: none; cursor:default; text-align: left;}
+                
+                .intro p em {animation: blinking 1s steps(2,end) infinite; letter-spacing: -20pt;}
+                
+                @keyframes blinking {
+                    to {letter-spacing: 5pt;}
+                }
+                
+                
+                
+                .introcontent, .introcontent p { cursor: default; animation: none; display: none;}
+                
+                
+                /*.omegleintro {animation-delay: 2s;}
+                .strangersintro {animation-delay: 3s;}
+                .ohmegullintro {animation-delay: 4s;}
+                .startchattingintro {animation-delay: 5s;}
+                .textintro {animation-delay: 6s;}
+                .spyintro {animation-delay: 7s;}
+                .connectingintro {animation-delay: 8s;}*/
+                
             </style>
             
             <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
@@ -156,18 +182,51 @@
                     $('.smallmenu').show();
                 });
                 
+                $('.menu').hide();
+                $('.omegleintro').delay(1000).fadeIn(800);
+                $('.strangersintro').delay(1500).fadeIn(400);
+                $('.ohmegullintro').delay(4000).fadeIn(200);
+                $('.startchattingintro, .textintro').delay(8000).fadeIn(200);
+                $('.tryintro').delay(10000).fadeIn(800);
+                
+                
+                $('.textintro').click( function() {
+                    window.alert("We're sorry, this function isn't available right now.");
+                });
+                
+                $('.tryintro').hover( function() {
+                    $('.spyintro').fadeIn()
+                });
+                
+                $('.tryintro').click( function() {
+                    $('.introcontent').fadeOut()
+                });
+                
+                
             });
             </script>
             
         </head>
         <body>
             
-            <!--<div class="intro">
-                <p>Connecting to server...</p>
-                <p>Connecting to server &nbsp;...</p>
-                <p>Looking for someone to chat with...</p>
-                <p>Looking for someone to chat with &nbsp; ...</p>
-            </div>!-->
+            <div class="intro">
+                <p class="omegleintro introcontent">Omegle</p>
+                <p class="strangersintro introcontent">Talk to strangers!</p>
+                <p class="ohmegullintro introcontent">Omegle (oh·meg·ull) is a great way to meet new friends.</p>
+                
+                <p class="startchattingintro introcontent">Start Chatting:</p>
+                <p class="textintro introcontent">Text</p>
+                
+                <div class="tryintro introcontent">
+                    <p class="tryintro">Or try spy (question) mode...</p>
+                    <p class="spyintro">Spy mode lets you ask a question and watch two strangers discuss it. (The strangers volunteer to be watched.)</p>
+                    <p class="spyintro">Ask anything you like, but try to keep questions open-ended and thought-provoking.</p>
+                </div>
+                
+                
+                <p class="connectingintro introcontent">Connecting to server <em>&nbsp;</em>...</p>
+                <p class="connectingintro introcontent">Looking for someone to chat with <em>&nbsp;</em>...</p>
+            </div>
             
             <div class="menu">
                 <div class="exitlightbox">Stop (Escape)</div>
