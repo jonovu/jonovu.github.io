@@ -30,11 +30,11 @@
                     font-family: "capitolium-2";
                     font-weight: 300;
                     line-height: 52pt;
-                    color: #2a1813;
+                    color: #003958;
                     letter-spacing: 0.1pt;
                     
                 }
-                .subtitle {font-size: 31.5pt; position: absolute; margin-top: 70pt; animation: fadesub 2.4s forwards; animation-delay: 26.2s; font-family: domaine text test; font-weight: 400;}
+                .subtitle {font-size: 31.5pt; position: absolute; margin-top: 70pt; animation: fadesub 2.4s forwards; animation-delay: 26.2s; font-family: domaine text test; font-weight: 400; color:#125861;}
                 
                 span {
                     animation: fade 6s forwards;
@@ -45,13 +45,14 @@
                 @keyframes fade {
                     0% {opacity:0; color: #6d9da4; filter: blur(2px) contrast(10) brightness(0);}
                     20% {color: #a9d3b6; opacity: 1; filter: blur(1px) contrast(1) brightness(1);}
-                    30% {color: #8ba099;}
-                    100% {opacity:1; filter: blur(0.4px) contrast(1) brightness(1.1);}
+                    30% {color: #8ba099; opacity: 1;}
+                    100% {opacity:0.4; filter: blur(0.4px) contrast(1) brightness(1.1);}
                 }
                 
                 @keyframes fadesub {
                     0% {opacity:0;}
-                    100% {opacity:1;}
+                    30% {opacity:0.8;}
+                    100% {opacity: 0.4; color: #003958;}
                 }
                 
                 #ive {animation-delay: 1s}
