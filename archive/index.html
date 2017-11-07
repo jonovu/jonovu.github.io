@@ -5,7 +5,7 @@
             <title>Archive</title>
             <style>
     
-                * {margin: 0; padding: 0; outline: 1pt solid aqua;}
+                * {margin: 0; padding: 0;}
                 
                 body {overflow: hidden;}
     
@@ -59,39 +59,36 @@
                 
                 .button.active {background-color: green;}
                 
-                .smallmenu {outline: 1pt solid black; padding: 2pt 5pt 2pt 5pt; margin: 7pt 0 0 0;}
+                .smallmenu {padding: 2pt 5pt 2pt 5pt; margin: 7pt 0 0 0; border-radius: 200px;}
+                
+                .smallmenu:hover {background-color: red;}
                 
                 .menu {padding: 7pt;}
                 
-                .exitlightbox {background-color: dodgerblue; padding: 20pt;}
+                .exitlightbox, .textintro, div > p.tryintro {background-color: dodgerblue; padding: 20pt; display: inline-flex;}
                 
                 
                 
                 
                 
                 
-                .intro {position: fixed; margin-top: 5vh; width: 70%; margin-left: 15%; z-index: 5;}
+                .intro {position: fixed; margin-top: 7pt; max-width: 60%; margin-left: 7pt; z-index: 5;}
                 
                 .intro p {font-size: 20pt; font-family: chalkboard; text-transform: none; cursor:default; text-align: left;}
                 
                 .intro p em {animation: blinking 1s steps(2,end) infinite; letter-spacing: -20pt;}
                 
                 @keyframes blinking {
-                    to {letter-spacing: 5pt;}
+                    to {letter-spacing: 10pt;}
                 }
                 
                 
                 
                 .introcontent, .introcontent p { cursor: default; animation: none; display: none;}
                 
+                p.ohmegullintro, p.startchattingintro, p.spyintro, p.connectingintro {font-size: 14pt; margin-top: 7pt; margin-bottom: 7pt;}
                 
-                /*.omegleintro {animation-delay: 2s;}
-                .strangersintro {animation-delay: 3s;}
-                .ohmegullintro {animation-delay: 4s;}
-                .startchattingintro {animation-delay: 5s;}
-                .textintro {animation-delay: 6s;}
-                .spyintro {animation-delay: 7s;}
-                .connectingintro {animation-delay: 8s;}*/
+                .exitlightbox, .smallmenu, div.outer p, .textintro, .tryintro {cursor: pointer;}
                 
             </style>
             
@@ -216,11 +213,16 @@
                 <p class="strangersintro introcontent">Talk to strangers!</p>
                 <p class="ohmegullintro introcontent">Omegle (oh·meg·ull) is a great way to meet new friends.</p>
                 
+                <br><br><br>
+                
                 <p class="startchattingintro introcontent">Start Chatting:</p>
                 <p class="textintro introcontent">Text</p>
                 
+                <br>
+                
                 <div class="tryintro introcontent">
                     <p class="tryintro">Or try spy (question) mode...</p>
+                    <br>
                     <p class="spyintro">Spy mode lets you ask a question and watch two strangers discuss it. (The strangers volunteer to be watched.)</p>
                     <p class="spyintro">Ask anything you like, but try to keep questions open-ended and thought-provoking.</p>
                 </div>
