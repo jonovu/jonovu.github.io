@@ -1963,7 +1963,7 @@ li {
         margin: auto;
         top: 10px;
         margin-bottom: 30px;
-        width: 250px;
+        width: 270px;
         position: relative;
         min-height: 70px;
         left: 0;
@@ -2017,7 +2017,7 @@ li {
 
     .about-wrapper p,
     .contact-wrapper p {
-        font-size: 13pt;
+        font-size: 15pt;
         line-height: 1.7;
         text-align: center;
     }
