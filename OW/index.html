@@ -1,0 +1,214 @@
+<html>
+    <head>
+        <style>
+            html {
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+
+            h1 {
+                font-family: "GT Super Display Trial Light";
+                font-weight: 300;
+                font-size: 60px;
+                line-height: 1;
+                margin: 0;
+            }
+
+            body {
+                font-family: Optima;
+                line-height: 1.6;
+                font-size: 11pt;
+
+            }
+
+            img {
+                width: 400px;
+                display: inline-block;
+                position: relative;
+                padding: 5px;
+            }
+
+            img.full-height {
+                height: 100%;
+            }
+            .header img.full-height {
+                margin-left: 50px;
+            }
+
+            img.small {
+                width: 300px;
+                height: auto;
+            }
+
+            img.small.landscape {
+                width: 400px;
+            }
+            img .waterfall {
+                position: relative;
+                display: block;
+            }
+
+            section {
+                width: fit-content;
+                position: relative;
+                display: flex;
+                margin: 40px auto;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                justify-content: center;
+                perspective: 2px;
+            }
+            .caption {
+                display: inline-block;
+                width: 200px;
+                padding: 10px;
+                margin: 0;
+            }
+            .caption p {
+                margin-top: 0;
+            }
+            .caption .dropcap {
+                font-size: 20pt;
+                font-weight: 500;
+            }
+
+            section > * {
+                position: relative;
+                margin: 0 auto;
+            }
+            section>img {
+                margin: 0;
+            }
+
+            .header > * {
+                display: inline-block;
+            }
+
+            .wrapper > * {
+                display: flex;
+            
+            }
+
+            .info {
+            }
+
+            .info > * {
+                display: inline-block;
+                padding: 5px;
+                padding-right: 10px;
+            }
+
+            .wrapper {
+                width: 600px;
+                padding: 5px;
+            }
+            .wrapper > * {
+                margin: 5px;
+            }
+
+            .img-wrapper {
+                padding: 5px;
+            }
+
+            .img-wrapper img {
+                padding: 5px;
+            }
+
+            .img-wrapper img {
+                width: 50%;
+            }
+
+            .wrapper2 img {
+                display: inline-block;
+            }
+            /*.parallax {
+                position: relative;
+                width: 2000px;
+                height: 100%;
+                overflow-y: scroll;
+                perspective: 10px;
+                height: 300px;
+            }
+            .parallax .waterfall {
+                position: absolute;
+                transform: translateZ(1px) scale(1)
+            }*/
+            @media screen and (max-width: 1200px) {
+                body {
+                    font-size: 10pt;
+                }
+                .img-wrapper {
+                    margin-top: 0;
+                    padding-top: 0;
+                }
+                img.small {
+                    padding-top: 0;
+                }
+                .wrapper {
+                    
+                    width: 400px;
+                }
+                .header img.full-height {
+                    margin-left: 0;
+                    margin-bottom: 5px;
+                }
+                .caption {
+                    padding: 30px;
+    
+                }
+                img.full-height {
+                    margin-bottom: 5px;
+                }
+                .wrapper2 img {
+                    margin: 0 auto;
+                    position: relative;
+                    display: block;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <section class="header">
+            <div class="wrapper">
+                <div class="img-wrapper">
+                    <img class="small" src="images/1.jpg" />
+                    <img class="small" src="images/2.jpg" />
+                </div>
+                <div class="info">
+                    <div>
+                        <h1>Terror Twilight</h1>
+                        <p>Terror Twilight is a weekend institution for brunch-goers, coffee fanatics, interior designers, hipsters, and now, sartorialists. Come for the coffee, stay for the mimosas and the fried chicken sandwich</p>
+                    </div>
+                    <div>
+                        <p><strong>PICTURED:</strong></p>
+                        <p>(LEFT) Blueberry Pancakes with blueberry maple caramel, pickled blueberries, coyo, pecares &amp; scerel.</p>
+                        <p>(RIGHT) Chilli scramble with house sambal, pickled shiitake, crispy shallots, parmesan and microgreens.</p>
+                    </div>
+                </div>
+            </div>
+            <img class="full-height" src="images/3.jpg" />
+        </section>
+        <section class="parallax">
+            <img class="full-height" src="images/4.jpg" />
+            <img class="waterfall small" src="images/5.jpg" />
+            <img class="waterfall small landscape" src="images/6.jpg" />
+            <div class="caption">
+                <p><span class="dropcap">J</span> wears a film-friendly combination of Holland &and; Sherry Crystal Springs, Thomas Mason Shirting.</p>
+                <p><span class="dropcap">A</span> dons a deadstock Wool/Cashmere sportcoat over his black, woven knit.</p>
+            </div>
+        </section>
+        <section>
+            <img class="waterfall small landscape" src="images/7.jpg" />
+            <img class="waterfall small landscape" src="images/8.jpg" />
+        </section>
+        <section>
+            <div class="wrapper2">
+                <img class="small" src="images/9.jpg" />
+                <img class="small" src="images/10.jpg" />
+            </div>
+        </section>
+    </body>
+</html>
